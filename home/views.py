@@ -109,8 +109,8 @@ class OriginatorDDLogApiView(BaseAPIView):
     """
     OutDirectDebitsDataEndpoint (DD log)
     """
-    role = settings.ORIGINATOR_DD_LOG_ROLE
-    endpoint = "DD_log"  # https://api.originator.com:8021/DD_log
+    role = settings.ROLES['ORIGINATOR_DD_LOG']
+    endpoint = settings.APIS['ORIGINATOR_DD_LOG']  # https://api.originator.com:8021/DD_log
     method = "GET"
     has_params = True
     base_url = settings.APIS['BASE_URL']
@@ -120,8 +120,8 @@ class OriginatorDDOutwardDirectDebitPostingApiView(BaseAPIView):
     """
     Alternate posting path mentioned in summary (if your infra exposes it)
     """
-    role = settings.ORIGINATOR_OUTWARD_DIRECT_DEBIT_POSTING_ROLE
-    endpoint = "DD_OutwardDirectDebitPosting"  # https://api.originator.com:8794/DD_OutwardDirectDebitPosting
+    role = settings.ROLES['ORIGINATOR_DD_OUTWARD_POSTING']
+    endpoint = settings.APIS['ORIGINATOR_DD_OUTWARD_POSTING']  # https://api.originator.com:8794/DD_OutwardDirectDebitPosting
     method = "POST"
     has_body = True
     base_url = settings.APIS['BASE_URL']
@@ -131,8 +131,8 @@ class OriginatorOutwardDDsUnpaidPostingApiView(BaseAPIView):
     """
     Alternate unpaid posting path mentioned in summary
     """
-    role = settings.ORIGINATOR_OUTWARD_DDS_UNPAID_POSTING_ROLE
-    endpoint = "OutwardDDsUnpaidPosting"  # https://api.originator.com:8021/OutwardDDsUnpaidPosting
+    role = settings.ROLES['ORIGINATOR_DDS_UNPAID_POSTING']
+    endpoint = settings.APIS['ORIGINATOR_DDS_UNPAID_POSTING']  # https://api.originator.com:8021/OutwardDDsUnpaidPosting
     method = "POST"
     has_body = True
     base_url = settings.APIS['BASE_URL']

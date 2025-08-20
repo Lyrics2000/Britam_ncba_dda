@@ -1148,7 +1148,10 @@
                 "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
                 "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
-                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid"
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid",
+                "ORIGINATOR_DD_LOG": "/DD_log",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "/DD_OutwardDirectDebitPosting",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "/OutwardDDsUnpaidPosting"
             },
             "ROLES": {
                 "BANK_ACCOUNT_VALIDATION": "NCBA_DDA_BANK_ACCOUNT_VALIDATION_UAT",
@@ -1157,7 +1160,10 @@
                 "CANCEL_MANDATES": "NCBA_DDA_CANCEL_MANDATES_UAT",
                 "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_UAT",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_UAT",
-                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_UAT"
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_UAT",
+                "ORIGINATOR_DD_LOG": "ORIGINATOR_DD_LOG_UAT",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "ORIGINATOR_DD_OUTWARD_POSTING_UAT",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "ORIGINATOR_DDS_UNPAID_POSTING_UAT"
             }
         },
         "PROD": {
@@ -1193,7 +1199,10 @@
                 "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
                 "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
-                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid"
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid",
+                "ORIGINATOR_DD_LOG": "/DD_log",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "/DD_OutwardDirectDebitPosting",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "/OutwardDDsUnpaidPosting"
             },
             "ROLES": {
                 "BANK_ACCOUNT_VALIDATION": "NCBA_DDA_BANK_ACCOUNT_VALIDATION_PROD",
@@ -1202,7 +1211,10 @@
                 "CANCEL_MANDATES": "NCBA_DDA_CANCEL_MANDATES_PROD",
                 "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_PROD",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_PROD",
-                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_PROD"
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_PROD",
+                "ORIGINATOR_DD_LOG": "ORIGINATOR_DD_LOG_PROD",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "ORIGINATOR_DD_OUTWARD_POSTING_PROD",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "ORIGINATOR_DDS_UNPAID_POSTING_PROD"
             }
         }
     }
