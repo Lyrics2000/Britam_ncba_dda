@@ -17,10 +17,27 @@ file_path = BASE_DIR / 'config.json'
 
 with open(file_path, 'r') as file:
     data = json.load(file)
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
+INDEV = True
+if INDEV:
+    DEBUG = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['DEBUG']
+    ALLOWED_HOSTS = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['ALLOWED_HOSTS']
+    SECRET_KEY = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['SECRET_KEY']
+    APIS = data['BRITAM_NCBA_DDA']['UAT']['APIS']
+    ROLES = data['BRITAM_NCBA_DDA']['UAT']['ROLES']
+    AUDIENCE =  data['AUDIENCE']['UAT']
+    ISSUER_ID =  data['ISSUER_ID']['UAT']
+else:
+    DEBUG = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['DEBUG']
+    ALLOWED_HOSTS = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['ALLOWED_HOSTS']
+    SECRET_KEY = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['SECRET_KEY']
+    APIS = data['BRITAM_NCBA_DDA']['PROD']['APIS']
+    ROLES = data['BRITAM_NCBA_DDA']['PROD']['ROLES']
+    AUDIENCE =  data['AUDIENCE']['PROD']
+    ISSUER_ID =  data['ISSUER_ID']['PROD']
 # SECURITY WARNING: don't run with debug turned on in production!
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'home.middleware.ForceJsonErrorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -74,20 +92,6 @@ DATABASES = {
 }
 
 
-
-INDEV = True
-if INDEV:
-    DEBUG = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['DEBUG']
-    ALLOWED_HOSTS = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['ALLOWED_HOSTS']
-    SECRET_KEY = data['BRITAM_NCBA_DDA']['UAT']['SECURITY']['SECRET_KEY']
-    APIS = data['BRITAM_NCBA_DDA']['UAT']['APIS']
-    ROLES = data['BRITAM_NCBA_DDA']['UAT']['ROLES']
-else:
-    DEBUG = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['DEBUG']
-    ALLOWED_HOSTS = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['ALLOWED_HOSTS']
-    SECRET_KEY = data['BRITAM_NCBA_DDA']['PROD']['SECURITY']['SECRET_KEY']
-    APIS = data['BRITAM_NCBA_DDA']['PROD']['APIS']
-    ROLES = data['BRITAM_NCBA_DDA']['PROD']['ROLES']
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -261,6 +265,14 @@ LOGGING = {
     },
 }
 
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        # Do NOT include BrowsableAPIRenderer if you never want HTML
+        # "rest_framework.renderers.BrowsableAPIRenderer",
+    ],
+    "EXCEPTION_HANDLER": "home.exceptions.drf_exception_handler",
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
