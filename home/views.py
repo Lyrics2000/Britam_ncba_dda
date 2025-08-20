@@ -5,17 +5,17 @@ from utils.ImportantClass import (
 )
 from django.conf import settings
 
-class AmaliTokenApiView(BaseAPIView):
-    """
-    OAuth2 Client Credentials (as per doc). Spec only gives endpoint.
-    """
-    role = settings.AMALI_TOKEN_ROLE
-    endpoint = settings.APIS['LOGIN']  # https://api.AmaliDDs.com:1824/AmaliWebAPI/token
-    method = "POST"
-    has_body = True
-    base_url = settings.APIS['BASE_URL']
-    # Optionally, your BaseAPIView could look for this:
-    auth_type = "none"
+# class AmaliTokenApiView(BaseAPIView):
+#     """
+#     OAuth2 Client Credentials (as per doc). Spec only gives endpoint.
+#     """
+#     role = settings.AMALI_TOKEN_ROLE
+#     endpoint = settings.APIS['LOGIN']  # https://api.AmaliDDs.com:1824/AmaliWebAPI/token
+#     method = "POST"
+#     has_body = True
+#     base_url = settings.APIS['BASE_URL']
+#     # Optionally, your BaseAPIView could look for this:
+#     auth_type = "none"
 
 class AmaliAccountValidationApiView(BaseAPIView):
     """

@@ -2,7 +2,7 @@
 from django.urls import path
 from .views import (
     # Amali (Bank)
-    AmaliTokenApiView,
+    # AmaliTokenApiView,
     AmaliAccountValidationApiView,
     AmaliNewMandateApiView,
     AmaliAmendMandateApiView,
@@ -19,11 +19,11 @@ from .views import (
 app_name = "home"
 
 urlpatterns = [
-    path(
-        "dd/v1/amali/token/",
-        AmaliTokenApiView.as_view(),
-        name="amali-token",
-    ),
+    # path(
+    #     "dd/v1/amali/token/",
+    #     AmaliTokenApiView.as_view(),
+    #     name="amali-token",
+    # ),
     path(
         "dd/v1/amali/account-validation/",
         AmaliAccountValidationApiView.as_view(),
