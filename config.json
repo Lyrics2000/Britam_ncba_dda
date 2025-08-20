@@ -1,0 +1,1209 @@
+{
+    "IGAS_SEND_NOTIFICATION_TO_IGAS_WEB_SERVICE": {
+        "UAT": "IGAS_SEND_NOTIFICATION_TO_IGAS_WEB_SERVICE_UAT",
+        "PROD": "IGAS_SEND_NOTIFICATION_TO_IGAS_WEB_SERVICE_PROD"
+    },
+    "BANK_NOTIFICATIONS": {
+        "UAT": "BANK_NOTIFICATIONS_UAT",
+        "PROD": "BANK_NOTIFICATIONS_PROD"
+    },
+    "LOGGING_VALUATION_ERROR": {
+        "UAT": "LOGGING_VALUATION_ERROR_UAT",
+        "PROD": "LOGGING_VALUATION_ERROR_PROD"
+    },
+    "BRITAM_CALLBACK": {
+        "UAT": "BRITAM_CALLBACK_UAT",
+        "PROD": "BRITAM_CALLBACK_PROD"
+    },
+    "COOP_BANK": {
+        "UAT": "COOP_BANK_UAT",
+        "PROD": "COOP_BANK_PROD"
+    },
+    "BRITAM_AGENT_APP_CONFIG": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "BRITAMPEN",
+                    "USER": "bgmintergration",
+                    "PASSWORD": "1nt3rgr@t10n",
+                    "HOST": "172.26.0.55",
+                    "PORT": "1433",
+                    "OPTIONS": {
+                        "driver": "ODBC Driver 17 for SQL Server",
+                        "extra_params": "Encrypt=optional;TrustServerCertificate=yes",
+                        "unicode_results": true
+                    }
+                },
+                "agilepen": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "BRITAMPEN",
+                    "USER": "bgmintergration",
+                    "PASSWORD": "1nt3rgr@t10n",
+                    "HOST": "172.26.0.55",
+                    "PORT": "1433",
+                    "OPTIONS": {
+                        "driver": "ODBC Driver 17 for SQL Server",
+                        "extra_params": "Encrypt=optional;TrustServerCertificate=yes",
+                        "unicode_results": true
+                    }
+                }
+            },
+            "ROLES": {
+                "AGENT_APP_VERIFY_USER": "AGENT_APP_VERIFY_USER_UAT",
+                "AGENT_APP_SEND_PAYMENT": "AGENT_APP_SEND_PAYMENT_UAT"
+            },
+            "DEBUG": true,
+            "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+            "VERIFY_POLICY_QUERY": "SELECT * FROM MEMBERS WHERE POLICY_NO = ? AND SCHEME_ID IN ('1283','1267') AND STATUS IN ('ACTIVE','DEFERRED','DORMANT')",
+            "VERIFY_AGILE_PEN_COORPERATE": "SELECT * FROM PENSION_BILL_VALIDATION WHERE SponsorNo=? ",
+            "CREATE_PAYMENT_QUERY": "MMA"
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "BRITAMPEN",
+                    "USER": "bgmintergration",
+                    "PASSWORD": "1nt3rgr@t10n",
+                    "HOST": "172.26.0.55",
+                    "PORT": "1433",
+                    "OPTIONS": {
+                        "driver": "ODBC Driver 17 for SQL Server",
+                        "extra_params": "Encrypt=optional;TrustServerCertificate=yes",
+                        "unicode_results": true
+                    }
+                },
+                "agilepen": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "BRITAMPEN",
+                    "USER": "bgmintergration",
+                    "PASSWORD": "1nt3rgr@t10n",
+                    "HOST": "172.26.0.55",
+                    "PORT": "1433",
+                    "OPTIONS": {
+                        "driver": "ODBC Driver 17 for SQL Server",
+                        "extra_params": "Encrypt=optional;TrustServerCertificate=yes",
+                        "unicode_results": true
+                    }
+                }
+            },
+            "ROLES": {
+                "AGENT_APP_VERIFY_USER": "AGENT_APP_VERIFY_USER_PROD",
+                "AGENT_APP_SEND_PAYMENT": "AGENT_APP_SEND_PAYMENT_PROD"
+            },
+            "DEBUG": false,
+            "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+            "VERIFY_POLICY_QUERY": "SELECT * FROM MEMBERS WHERE POLICY_NO = ? AND SCHEME_ID IN ('1283','1267') AND STATUS IN ('ACTIVE','DEFERRED','DORMANT')",
+            "VERIFY_AGILE_PEN_COORPERATE": "SELECT * FROM PENSION_BILL_VALIDATION WHERE SponsorNo=? ",
+            "CREATE_PAYMENT_QUERY": "MMA"
+        }
+    },
+    "COMMISSION_ERP": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[commissions_uat]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                },
+                "erp_table": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "PREPROD",
+                    "USER": "apps",
+                    "PASSWORD": "ADVANTAGE#_N01",
+                    "HOST": "10.10.4.12",
+                    "PORT": "1531",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                }
+            },
+            "ROLES": {
+                "AGENT_APP_VERIFY_USER": "AGENT_APP_VERIFY_USER_UAT",
+                "AGENT_APP_SEND_PAYMENT": "AGENT_APP_SEND_PAYMENT_UAT"
+            },
+            "API": {
+                "CALLBACK": "https://api-uat.example.com/api/v1/callback/",
+                "TIMEOUT": 30
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "LOGGING": {
+                "version": 1,
+                "disable_existing_loggers": false,
+                "formatters": {
+                    "verbose": {
+                        "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+                        "style": "{",
+                        "datefmt": "%Y-%m-%d %H:%M:%S"
+                    },
+                    "simple": {
+                        "format": "{levelname} {message}",
+                        "style": "{"
+                    }
+                },
+                "handlers": {
+                    "file": {
+                        "level": "DEBUG",
+                        "class": "logging.handlers.RotatingFileHandler",
+                        "filename": "/var/log/app/uat.log",
+                        "maxBytes": "1024*1024*5",
+                        "backupCount": 5,
+                        "formatter": "verbose"
+                    },
+                    "console": {
+                        "level": "INFO",
+                        "class": "logging.StreamHandler",
+                        "formatter": "simple"
+                    }
+                },
+                "loggers": {
+                    "django": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "INFO",
+                        "propagate": false
+                    },
+                    "commission": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "DEBUG",
+                        "propagate": false
+                    }
+                }
+            },
+            "ERP_COMMISSION_KEY": "CMRecords",
+            "GET_LINES_QUERY": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE' FROM AIMS_INVOICE_NUM",
+            "SIRIUS_AIMS_PAYABLES_HEADER": "SELECT ID, SERIAL_NUMB, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE,CALC_TAX_DURING_IMPORT_FLAG, VENDOR_NUM,VENDOR_NAME, VENDOR_SITE_CODE,INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME,DESCRIPTION, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, SOURCE, PAYMENT_METHOD_LOOKUP_CODE PAY_GROUP_LOOKUP_CODE, GL_DATE FROM SIRIUS_AIMS_PAYABLES_HEADER WHERE INTEGRATION_STATUS = 'UNPROCESSED' AND ETL_STATUS = 'COMPLETED' AND DMS_WORKFLOW_STATUS = 'Approved'",
+            "SIRIUS_AIMS_PAYABLES_LINES": "SELECT LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,  AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, DIST_CODE_CONCATENATED FROM SIRIUS_AIMS_PAYABLES_LINES WHERE INVOICE_NUM = :invoice_num",
+            "AIMS_PAYMENTS_HEADERS": "SELECT ID,SERIAL_NUMB,OPERATING_UNIT,INVOICE_NUM,INVOICE_TYPE_LOOKUP_CODE,INVOICE_DATE,PO_NUMBER ,VENDOR_NAME,VENDOR_SITE_CODE,INVOICE_AMOUNT,INVOICE_CURRENCY_CODE,GL_DATE, DESCRIPTION, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE,TERMS_NAME,WORKFLOW_FLAG,PAYMENT_METHOD_LOOKUP_CODE,PAY_GROUP_LOOKUP_CODE,CALC_TAX_DURING_IMPORT_FLAG, ADD_TAX_TO_INV_AMT_FLAG,'SOURCE',ATTRIBUTE2, ATTRIBUTE3,PAYEE_NAME,ACCOUNT_NO,BANK_CODE,BRANCH_CODE, ERP_STATUS, ERP_STATUS_DATE, INVOICE_STATUS, INVOICE_STATUS_DATE, INTEGRATION_STATUS, INTEGRATION_DATE, EXTERNAL_INVOICE_NUMBER, VENDER_NUM FROM AIMS_PAYMENTS_HEADERS WHERE INVOICE_DATE >= TRUNC(SYSDATE - 30)",
+            "SIRIUS_AIMS_PAYABLES_HEADER_WITH_INVOICE_NUMBER_FILTER": "SELECT SERIAL_NUMB, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE, VENDOR_NUM, VENDOR_SITE_CODE, INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME, DESCRIPTION, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, SOURCE, PAYMENT_METHOD_LOOKUP_CODE, PAY_GROUP_LOOKUP_CODE, GL_DATE FROM SIRIUS_AIMS_PAYABLES_HEADER WHERE INVOICE_NUM = :invoice_num ",
+            "SIRIUS_AIMS_PAYABLES_LINES_INVOICE_NUMBER_AND_LINE_NUMBER_FILTER": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,AMOUNT_INCLUDES_TAX_FLAG,TAX_CODE, DIST_CODE_CONCATENATED, TAX_CODE FROM SIRIUS_AIMS_PAYABLES_LINES WHERE INVOICE_NUM = :invoice_num AND LINE_NUMBER = :line_number",
+            "AIMS_INVOICE_NUM_FILTER_BY_INVOICE_NUMBER": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES, AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE' FROM AIMS_INVOICE_NUM WHERE INVOICE_NUM = :invoice_num",
+            "INSERT_INTO_SIRIUS_AIMS_PAYABLES_HEADER": "INSERT INTO SIRIUS_AIMS_PAYABLES_HEADER ( ID, SERIAL_NUMB, OPERATING_UNIT, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE, PO_NUMBER, VENDOR_NAME, VENDOR_SITE_CODE, INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, GL_DATE, DESCRIPTION, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME, WORKFLOW_FLAG, PAYMENT_METHOD_LOOKUP_CODE, PAY_GROUP_LOOKUP_CODE, CALC_TAX_DURING_IMPORT_FLAG, ADD_TAX_TO_INV_AMT_FLAG 'SOURCE', ATTRIBUTE2, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, ERP_STATUS, ERP_STATUS_DATE, INVOICE_STATUS, INVOICE_STATUS_DATE, INTEGRATION_STATUS, INTEGRATION_DATE, EXTERNAL_INVOICE_NUMBER, VENDOR_NUM, ETL_STATUS, DMS_WORKFLOW_STATUS, COMMENTS ) VALUES ( :id, :serial_numb, :operating_unit, :invoice_num, :invoice_type_lookup_code, :invoice_date, :po_number, :vendor_name, :vendor_site_code, :invoice_amount, :invoice_currency_code, :gl_date, :description, :exchange_rate, :exchange_rate_type, :exchange_date, :terms_name, :workflow_flag, :payment_method_lookup_code, :pay_group_lookup_code, :calc_tax_during_import_flag, :add_tax_to_inv_amt_flag, :source, :attribute2, :attribute3, :payee_name, :account_no, :bank_code, :branch_code, :erp_status, :erp_status_date, :invoice_status, :invoice_status_date, 'UNPROCESSED', ':current_datetime_str', :external_invoice_number, :vender_num, 'Pending', :dms_workflow_status, 'data added to SIRIUS_AIMS_PAYABLES_HEADER successfully' )",
+            "INSERT_INTO_SIRIUS_AIMS_PAYABLES_LINES": " INSERT INTO SIRIUS_AIMS_PAYABLES_LINES ( INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES, AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE') VALUES ( :invoice_num, :line_number, :line_type_lookup_code, :amount, :accounting_date, :description_lines, :amount_includes_tax_flag, :tax_code, :po_number_lines, :dist_code_concatenated, :assets_tracking_flag, :org, :invoice_withholding_tax, :vat_on_wht, :line_id, :source )",
+            "UPDATE_SIRIUS_AIMS_PAYABLES_HEADER": "UPDATE SIRIUS_AIMS_PAYABLES_HEADER SET ETL_STATUS = 'COMPLETED', COMMENTS = 'data added to both SIRIUS_AIMS_PAYABLES_HEADER and SIRIUS_AIMS_PAYABLES_LINES successfully' WHERE INVOICE_NUM = :invoice_num",
+            "UPDATE_NO_LINE_DATA_SIRIUS_AIMS_PAYABLES_HEADER": "UPDATE SIRIUS_AIMS_PAYABLES_HEADER SET ETL_STATUS = NULL, COMMENTS = 'No Lines data found' WHERE INVOICE_NUM = :invoice_num"
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[commissions_uat]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                },
+                "erp_table": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "PREPROD",
+                    "USER": "apps",
+                    "PASSWORD": "ADVANTAGE#_N01",
+                    "HOST": "10.10.4.12",
+                    "PORT": "1531",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                }
+            },
+            "ROLES": {
+                "AGENT_APP_VERIFY_USER": "AGENT_APP_VERIFY_USER_UAT",
+                "AGENT_APP_SEND_PAYMENT": "AGENT_APP_SEND_PAYMENT_UAT"
+            },
+            "API": {
+                "CALLBACK": "https://api-uat.example.com/api/v1/callback/",
+                "TIMEOUT": 30
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "LOGGING": {
+                "version": 1,
+                "disable_existing_loggers": false,
+                "formatters": {
+                    "verbose": {
+                        "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+                        "style": "{",
+                        "datefmt": "%Y-%m-%d %H:%M:%S"
+                    },
+                    "simple": {
+                        "format": "{levelname} {message}",
+                        "style": "{"
+                    }
+                },
+                "handlers": {
+                    "file": {
+                        "level": "DEBUG",
+                        "class": "logging.handlers.RotatingFileHandler",
+                        "filename": "/var/log/app/uat.log",
+                        "maxBytes": "1024*1024*5",
+                        "backupCount": 5,
+                        "formatter": "verbose"
+                    },
+                    "console": {
+                        "level": "INFO",
+                        "class": "logging.StreamHandler",
+                        "formatter": "simple"
+                    }
+                },
+                "loggers": {
+                    "django": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "INFO",
+                        "propagate": false
+                    },
+                    "commission": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "DEBUG",
+                        "propagate": false
+                    }
+                }
+            },
+            "ERP_COMMISSION_KEY": "CMRecords",
+            "GET_LINES_QUERY": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE' FROM AIMS_INVOICE_NUM",
+            "SIRIUS_AIMS_PAYABLES_HEADER": "SELECT ID, SERIAL_NUMB, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE,CALC_TAX_DURING_IMPORT_FLAG, VENDOR_NUM,VENDOR_NAME, VENDOR_SITE_CODE,INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME,DESCRIPTION, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, SOURCE, PAYMENT_METHOD_LOOKUP_CODE PAY_GROUP_LOOKUP_CODE, GL_DATE FROM SIRIUS_AIMS_PAYABLES_HEADER WHERE INTEGRATION_STATUS = 'UNPROCESSED' AND ETL_STATUS = 'COMPLETED' AND DMS_WORKFLOW_STATUS = 'Approved'",
+            "SIRIUS_AIMS_PAYABLES_LINES": "SELECT LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,  AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, DIST_CODE_CONCATENATED FROM SIRIUS_AIMS_PAYABLES_LINES WHERE INVOICE_NUM = :invoice_num",
+            "AIMS_PAYMENTS_HEADERS": "SELECT ID,SERIAL_NUMB,OPERATING_UNIT,INVOICE_NUM,INVOICE_TYPE_LOOKUP_CODE,INVOICE_DATE,PO_NUMBER ,VENDOR_NAME,VENDOR_SITE_CODE,INVOICE_AMOUNT,INVOICE_CURRENCY_CODE,GL_DATE, DESCRIPTION, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE,TERMS_NAME,WORKFLOW_FLAG,PAYMENT_METHOD_LOOKUP_CODE,PAY_GROUP_LOOKUP_CODE,CALC_TAX_DURING_IMPORT_FLAG, ADD_TAX_TO_INV_AMT_FLAG,'SOURCE',ATTRIBUTE2, ATTRIBUTE3,PAYEE_NAME,ACCOUNT_NO,BANK_CODE,BRANCH_CODE, ERP_STATUS, ERP_STATUS_DATE, INVOICE_STATUS, INVOICE_STATUS_DATE, INTEGRATION_STATUS, INTEGRATION_DATE, EXTERNAL_INVOICE_NUMBER, VENDER_NUM FROM AIMS_PAYMENTS_HEADERS WHERE INVOICE_DATE >= TRUNC(SYSDATE - 30)",
+            "SIRIUS_AIMS_PAYABLES_HEADER_WITH_INVOICE_NUMBER_FILTER": "SELECT SERIAL_NUMB, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE, VENDOR_NUM, VENDOR_SITE_CODE, INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME, DESCRIPTION, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, SOURCE, PAYMENT_METHOD_LOOKUP_CODE, PAY_GROUP_LOOKUP_CODE, GL_DATE FROM SIRIUS_AIMS_PAYABLES_HEADER WHERE INVOICE_NUM = :invoice_num ",
+            "SIRIUS_AIMS_PAYABLES_LINES_INVOICE_NUMBER_AND_LINE_NUMBER_FILTER": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES,AMOUNT_INCLUDES_TAX_FLAG,TAX_CODE, DIST_CODE_CONCATENATED, TAX_CODE FROM SIRIUS_AIMS_PAYABLES_LINES WHERE INVOICE_NUM = :invoice_num AND LINE_NUMBER = :line_number",
+            "AIMS_INVOICE_NUM_FILTER_BY_INVOICE_NUMBER": "SELECT INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES, AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE' FROM AIMS_INVOICE_NUM WHERE INVOICE_NUM = :invoice_num",
+            "INSERT_INTO_SIRIUS_AIMS_PAYABLES_HEADER": "INSERT INTO SIRIUS_AIMS_PAYABLES_HEADER ( ID, SERIAL_NUMB, OPERATING_UNIT, INVOICE_NUM, INVOICE_TYPE_LOOKUP_CODE, INVOICE_DATE, PO_NUMBER, VENDOR_NAME, VENDOR_SITE_CODE, INVOICE_AMOUNT, INVOICE_CURRENCY_CODE, GL_DATE, DESCRIPTION, EXCHANGE_RATE, EXCHANGE_RATE_TYPE, EXCHANGE_DATE, TERMS_NAME, WORKFLOW_FLAG, PAYMENT_METHOD_LOOKUP_CODE, PAY_GROUP_LOOKUP_CODE, CALC_TAX_DURING_IMPORT_FLAG, ADD_TAX_TO_INV_AMT_FLAG 'SOURCE', ATTRIBUTE2, ATTRIBUTE3, PAYEE_NAME, ACCOUNT_NO, BANK_CODE, BRANCH_CODE, ERP_STATUS, ERP_STATUS_DATE, INVOICE_STATUS, INVOICE_STATUS_DATE, INTEGRATION_STATUS, INTEGRATION_DATE, EXTERNAL_INVOICE_NUMBER, VENDOR_NUM, ETL_STATUS, DMS_WORKFLOW_STATUS, COMMENTS ) VALUES ( :id, :serial_numb, :operating_unit, :invoice_num, :invoice_type_lookup_code, :invoice_date, :po_number, :vendor_name, :vendor_site_code, :invoice_amount, :invoice_currency_code, :gl_date, :description, :exchange_rate, :exchange_rate_type, :exchange_date, :terms_name, :workflow_flag, :payment_method_lookup_code, :pay_group_lookup_code, :calc_tax_during_import_flag, :add_tax_to_inv_amt_flag, :source, :attribute2, :attribute3, :payee_name, :account_no, :bank_code, :branch_code, :erp_status, :erp_status_date, :invoice_status, :invoice_status_date, 'UNPROCESSED', ':current_datetime_str', :external_invoice_number, :vender_num, 'Pending', :dms_workflow_status, 'data added to SIRIUS_AIMS_PAYABLES_HEADER successfully' )",
+            "INSERT_INTO_SIRIUS_AIMS_PAYABLES_LINES": " INSERT INTO SIRIUS_AIMS_PAYABLES_LINES ( INVOICE_NUM, LINE_NUMBER, LINE_TYPE_LOOKUP_CODE, AMOUNT, ACCOUNTING_DATE, DESCRIPTION_LINES, AMOUNT_INCLUDES_TAX_FLAG, TAX_CODE, PO_NUMBER_LINES, DIST_CODE_CONCATENATED, ASSETS_TRACKING_FLAG, ORG, INVOICE_WITHHOLDING_TAX, VAT_ON_WHT, LINE_ID, 'SOURCE') VALUES ( :invoice_num, :line_number, :line_type_lookup_code, :amount, :accounting_date, :description_lines, :amount_includes_tax_flag, :tax_code, :po_number_lines, :dist_code_concatenated, :assets_tracking_flag, :org, :invoice_withholding_tax, :vat_on_wht, :line_id, :source )",
+            "UPDATE_SIRIUS_AIMS_PAYABLES_HEADER": "UPDATE SIRIUS_AIMS_PAYABLES_HEADER SET ETL_STATUS = 'COMPLETED', COMMENTS = 'data added to both SIRIUS_AIMS_PAYABLES_HEADER and SIRIUS_AIMS_PAYABLES_LINES successfully' WHERE INVOICE_NUM = :invoice_num",
+            "UPDATE_NO_LINE_DATA_SIRIUS_AIMS_PAYABLES_HEADER": "UPDATE SIRIUS_AIMS_PAYABLES_HEADER SET ETL_STATUS = NULL, COMMENTS = 'No Lines data found' WHERE INVOICE_NUM = :invoice_num"
+        }
+    },
+    "AIMS": {
+        "UAT": "AIMS_UAT",
+        "PROD": "AIMS_PROD"
+    },
+    "HTTP": {
+        "UAT": "HTTP_UAT",
+        "PROD": "HTTP_PROD"
+    },
+    "MTEK_BASEURL": {
+        "UAT": "https://coreuat.britam.com/",
+        "PROD": "https://coreuat.britam.com/"
+    },
+    "BRITAM_VALIDATION": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[VALIDATION]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "igas": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "IGASUAT",
+                    "USER": "baowner",
+                    "PASSWORD": "baowner",
+                    "HOST": "10.10.4.236",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "VALIDATION_VALIDATE_BILLREF": "VALIDATION_VALIDATE_BILLREF_UAT"
+            },
+            "API": {
+                "CALLBACK": "https://api-uat.example.com/api/v1/callback/",
+                "TIMEOUT": 30
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "LOGGING": {
+                "version": 1,
+                "disable_existing_loggers": false,
+                "formatters": {
+                    "verbose": {
+                        "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+                        "style": "{",
+                        "datefmt": "%Y-%m-%d %H:%M:%S"
+                    },
+                    "simple": {
+                        "format": "{levelname} {message}",
+                        "style": "{"
+                    }
+                },
+                "handlers": {
+                    "file": {
+                        "level": "DEBUG",
+                        "class": "logging.handlers.RotatingFileHandler",
+                        "filename": "/var/log/app/uat.log",
+                        "maxBytes": "1024*1024*5",
+                        "backupCount": 5,
+                        "formatter": "verbose"
+                    },
+                    "console": {
+                        "level": "INFO",
+                        "class": "logging.StreamHandler",
+                        "formatter": "simple"
+                    }
+                },
+                "loggers": {
+                    "django": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "INFO",
+                        "propagate": false
+                    },
+                    "commission": {
+                        "handlers": [
+                            "file",
+                            "console"
+                        ],
+                        "level": "DEBUG",
+                        "propagate": false
+                    }
+                }
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[VALIDATION]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                },
+                "erp_table": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "PREPROD",
+                    "USER": "apps",
+                    "PASSWORD": "ADVANTAGE#_N01",
+                    "HOST": "10.10.4.12",
+                    "PORT": "1531",
+                    "OPTIONS": {
+                        "threaded": true,
+                        "timeout": 30
+                    }
+                }
+            },
+            "ROLES": {
+                "VALIDATION_VALIDATE_BILLREF": "VALIDATION_VALIDATE_BILLREF_PROD"
+            },
+            "API": {
+                "CALLBACK": "https://api.example.com/api/v1/callback/",
+                "TIMEOUT": 30
+            },
+            "SECURITY": {
+                "DEBUG": false,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "api.example.com",
+                    "prod.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://prod.example.com"
+                ]
+            },
+            "LOGGING": {
+                "version": 1,
+                "disable_existing_loggers": false,
+                "formatters": {
+                    "verbose": {
+                        "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+                        "style": "{",
+                        "datefmt": "%Y-%m-%d %H:%M:%S"
+                    },
+                    "simple": {
+                        "format": "{levelname} {message}",
+                        "style": "{"
+                    }
+                },
+                "handlers": {
+                    "file": {
+                        "level": "INFO",
+                        "class": "logging.handlers.RotatingFileHandler",
+                        "filename": "/var/log/app/prod.log",
+                        "maxBytes": "1024*1024*50",
+                        "backupCount": 10,
+                        "formatter": "verbose"
+                    },
+                    "console": {
+                        "level": "WARNING",
+                        "class": "logging.StreamHandler",
+                        "formatter": "simple"
+                    },
+                    "mail_admins": {
+                        "level": "ERROR",
+                        "class": "django.utils.log.AdminEmailHandler",
+                        "include_html": true
+                    }
+                },
+                "loggers": {
+                    "django": {
+                        "handlers": [
+                            "file",
+                            "console",
+                            "mail_admins"
+                        ],
+                        "level": "INFO",
+                        "propagate": false
+                    },
+                    "commission": {
+                        "handlers": [
+                            "file",
+                            "console",
+                            "mail_admins"
+                        ],
+                        "level": "INFO",
+                        "propagate": false
+                    }
+                }
+            }
+        }
+    },
+    "VALIDATION_CALLBACK": {
+        "UAT": "https://brtgw.britam.com/policy/validation/uat/api/v1-clone/stk/callback/",
+        "PROD": "https://brtgw.britam.com/policy/validation/uat/api/v1-clone/stk/callback/"
+    },
+    "SAFARICOM_DARAJA_URL_AUTHORIZATION_URL_ENDPOINT": {
+        "UAT": "/oauth/{version}/generate?grant_type=client_credentials",
+        "PROD": "/oauth/{version}/generate?grant_type=client_credentials"
+    },
+    "IGAS_SEND_TO_IGAS_NOTIFICATION": {
+        "UAT": "IGAS_SEND_TO_IGAS_NOTIFICATION_UAT",
+        "PROD": "IGAS_SEND_TO_IGAS_NOTIFICATION_PROD"
+    },
+    "UNITMASTER": {
+        "UAT": "UNITMASTER_UAT",
+        "PROD": "UNITMASTER_PROD"
+    },
+    "VALIDATION_GROUP": {
+        "UAT": "VALIDATION_GROUP_UAT",
+        "PROD": "VALIDATION_GROUP_PROD"
+    },
+    "BRITAM_PAYMENT": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[payment_UAT]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "PAYMENTS_STK_PUSH": "PAYMENTS_STK_PUSH_UAT",
+                "PAYMENTS_STK_PUSH_BUSINESS": "PAYMENTS_STK_PUSH_BUSINESS_UAT",
+                "PAYMENT_QUERY_STK_PUSH": "PAYMENT_QUERY_STK_PUSH_UAT",
+                "PAYMENT_GET_TRANSACTIONAL_STATUS": "PAYMENT_GET_TRANSACTIONAL_STATUS_UAT",
+                "PAYMENT_ADD_PAYBILL": "PAYMENT_ADD_PAYBILL_UAT",
+                "PAYMENT_C2B_REGISTER": "PAYMENT_C2B_REGISTER_UAT",
+                "PAYMENT_C2B_SIMULATE": "PAYMENT_C2B_SIMULATE_UAT",
+                "PAYMENT_GET_FILTER_MPESA": "PAYMENT_GET_FILTER_MPESA_UAT",
+                "PAYMENT_REGISTER_URL": "PAYMENT_REGISTER_URL_UAT",
+                "PAYMENT_ADD_BUSINESS": "PAYMENT_ADD_BUSINESS_UAT",
+                "PAYMENT_VERIFY_CHECKOUT_ID": "PAYMENT_VERIFY_CHECKOUT_ID_UAT",
+                "PAYMENT_ADD_USER": "PAYMENT_ADD_USER_UAT",
+                "C2B_ADD_CALLBACK": "PAYMENT_C2B_ADD_CALLBACK_UAT",
+                "PAYMENT_ADD_BUSINESS_TO_DB": "PAYMENT_ADD_BUSINESS_TO_DB_UAT",
+                "PAYMENT_GET_BUSINESS_TO_DB": "PAYMENT_GET_BUSINESS_TO_DB_UAT",
+                "PAYMENT_DELETE_BUSINESS_TO_DB": "PAYMENT_DELETE_BUSINESS_TO_DB_UAT",
+                "PAYMENT_UPDATE_BUSINESS_TO_DB": "PAYMENT_UPDATE_BUSINESS_TO_DB_UAT",
+                "PAYMENT_VALIDATE_KYC": "PAYMENT_VALIDATE_KYC_UAT",
+                "PAYMENT_VERIFY_MANUAL_PAYMENT": "PAYMENT_VERIFY_MANUAL_PAYMENT_UAT"
+            },
+            "API": {
+                "TIMEOUT": 30,
+                "C2B_ONLINE_CHECKOUT_CALLBACK_URL": "https://brtgw.britam.com/mp/payment/uat",
+                "C2B_CONFIRMATION_URL": "https://brtgw.britam.com/mp/payment/uat/api/v1/confirmation_url/",
+                "C2B_VALIDATE_URL": "https://brtgw.britam.com/mp/payment/uat/api/v1/validation_url/",
+                "INTERNAL_VALIDATION_URL": "https://brtgw.britam.com/policy/validation/uat/api/v1/validate/",
+                "INTERNAL_VAL_URL": "https://brtgw.britam.com/policy/validation/callback/uat/api/v1/validate/internal/",
+                "SAFARICOM_DEVELOPMENT_BASEURL_UAT": "https://sandbox.safaricom.co.ke",
+                "SAFARICOM_DEVELOPMENT_BASEURL_PROD": "https://api.safaricom.co.ke"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[payments]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "PAYMENTS_STK_PUSH": "PAYMENTS_STK_PUSH",
+                "PAYMENTS_STK_PUSH_BUSINESS": "PAYMENTS_STK_PUSH_BUSINESS_PROD",
+                "PAYMENT_QUERY_STK_PUSH": "PAYMENT_QUERY_STK_PUSH",
+                "PAYMENT_GET_TRANSACTIONAL_STATUS": "PAYMENT_GET_TRANSACTIONAL_STATUS",
+                "PAYMENT_ADD_PAYBILL": "PAYMENT_ADD_PAYBILL",
+                "PAYMENT_C2B_REGISTER": "PAYMENT_C2B_REGISTER_PROD",
+                "PAYMENT_C2B_SIMULATE": "PAYMENT_C2B_SIMULATE_PROD",
+                "PAYMENT_GET_FILTER_MPESA": "PAYMENT_GET_FILTER_MPESA_PROD",
+                "PAYMENT_REGISTER_URL": "PAYMENT_REGISTER_URL_PROD",
+                "PAYMENT_ADD_BUSINESS": "PAYMENT_ADD_BUSINESS_PROD",
+                "PAYMENT_ADD_USER": "PAYMENT_ADD_USER_PROD",
+                "PAYMENT_VERIFY_CHECKOUT_ID": "PAYMENT_VERIFY_CHECKOUT_ID_PROD",
+                "PAYMENT_VERIFY_MANUAL_PAYMENT": "PAYMENT_VERIFY_MANUAL_PAYMENT_PROD",
+                "PAYMENT_ADD_BUSINESS_TO_DB": "PAYMENT_ADD_BUSINESS_TO_DB_PROD",
+                "PAYMENT_GET_BUSINESS_TO_DB": "PAYMENT_GET_BUSINESS_TO_DB_PROD",
+                "PAYMENT_DELETE_BUSINESS_TO_DB": "PAYMENT_DELETE_BUSINESS_TO_DB_PROD",
+                "PAYMENT_UPDATE_BUSINESS_TO_DB": "PAYMENT_UPDATE_BUSINESS_TO_DB_PROD",
+                "PAYMENT_VALIDATE_KYC": "PAYMENT_VALIDATE_KYC_PROD",
+                "C2B_ADD_CALLBACK": "PAYMENT_C2B_ADD_CALLBACK_PROD"
+            },
+            "API": {
+                "TIMEOUT": 30,
+                "C2B_ONLINE_CHECKOUT_CALLBACK_URL": "https://brtgw.britam.com/mp/payment",
+                "C2B_CONFIRMATION_URL": "https://brtgw.britam.com/mp/payment/api/v1/confirmation_url/",
+                "C2B_VALIDATE_URL": "https://brtgw.britam.com/mp/payment/api/v1/validation_url/",
+                "INTERNAL_VALIDATION_URL": "https://brtgw.britam.com/policy/validation/uat/api/v1/validate/",
+                "INTERNAL_VAL_URL": "https://brtgw.britam.com/policy/validation/callback/uat/api/v1/validate/internal/",
+                "SAFARICOM_DEVELOPMENT_BASEURL_UAT": "https://sandbox.safaricom.co.ke",
+                "SAFARICOM_DEVELOPMENT_BASEURL_PROD": "https://api.safaricom.co.ke"
+            },
+            "SECURITY": {
+                "DEBUG": false,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "api.example.com",
+                    "prod.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://prod.example.com"
+                ]
+            }
+        }
+    },
+    "ISSUER_ID": {
+        "UAT": "e303f219-75ef-479a-b23c-35ac9479a8ce",
+        "PROD": "e303f219-75ef-479a-b23c-35ac9479a8ce"
+    },
+    "PAYMENT_SEND_USER_CALLBACK_GROUP": {
+        "UAT": "PAYMENT_SEND_USER_CALLBACK_GROUP_UAT",
+        "PROD": "PAYMENT_SEND_USER_CALLBACK_GROUP_PROD"
+    },
+    "PAYMENT_GROUP": {
+        "UAT": "PAYMENT_GROUP_UAT",
+        "PROD": "PAYMENT_GROUP_PROD"
+    },
+    "SAFARICOM_DARAJA_URL": {
+        "UAT": "https://sandbox.safaricom.co.ke",
+        "PROD": "https://api.safaricom.co.ke"
+    },
+    "BRITAM_UNVALIDATED_MPESA_REQUESTS": {
+        "UAT": "BRITAM_UNVALIDATED_MPESA_REQUESTS",
+        "PROD": "BRITAM_UNVALIDATED_MPESA_REQUESTS"
+    },
+    "INTERNAL_VALIDATION_ADDRESS_ENDPOINT": {
+        "UAT": "/api/v1-clone/validate/internal/",
+        "PROD": "/api/v1-clone/validate/internal/"
+    },
+    "KAFKA_BOOSTRAP_SERVER_UAT": {
+        "UAT": "10.10.4.103:30092",
+        "PROD": "kafka:9093"
+    },
+    "NCBA_BANK": {
+        "UAT": "NCBA_BANK_UAT",
+        "PROD": "NCBA_BANK_PROD"
+    },
+    "IGAS_CONFIGRATIONS": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[igas]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "customer": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[customer_portal]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "IGAS_UPDATEPERSON": "IGAS_UPDATEPERSON_UAT",
+                "IGAS_UPDATE_PAYOUT_METHOD": "IGAS_UPDATE_PAYOUT_METHOD_UAT",
+                "IGAS_UPDATE_BANK_ACCOUNT": "IGAS_UPDATE_BANK_ACCOUNT_UAT",
+                "IGAS_GET_BANK_ACCOUNTS": "IGAS_GET_BANK_ACCOUNTS_UAT",
+                "IGAS_GET_COUNT": "IGAS_GET_COUNT_UAT",
+                "IGAS_GET_PRODUCTS": "IGAS_GET_PRODUCTS_UAT",
+                "IGAS_GET_ADDRESS": "IGAS_GET_ADDRESS_UAT",
+                "IGAS_GET_LOOKUP_LIST": "IGAS_GET_LOOKUP_LIST_UAT",
+                "IGAS_GET_CONTACTS": "IGAS_GET_CONTACTS_UAT",
+                "IGAS_GET_RISK_PREMIUM": "IGAS_GET_RISK_PREMIUM_UAT",
+                "IGAS_CREATE_BANK_ACCOUNT": "IGAS_CREATE_BANK_ACCOUNT_UAT",
+                "IGAS_UPDATE_ADDRESS": "IGAS_UPDATE_ADDRESS_UAT",
+                "IGAS_GET_PROPOSAL_ERRORS": "IGAS_GET_PROPOSAL_ERRORS_UAT",
+                "IGAS_GET_PRODUCT_PARAMS": "IGAS_GET_PRODUCT_PARAMS_UAT",
+                "IGAS_CREATE_CONTACTS": "IGAS_CREATE_CONTACTS_UAT",
+                "IGAS_UPDATE_POLICY_BENEFIT_BENEFS": "IGAS_UPDATE_POLICY_BENEFIT_BENEFS_UAT",
+                "IGAS_GET_AGENTS_LIST": "IGAS_GET_AGENTS_LIST_UAT",
+                "IGAS_GET_PROPOSAL_DETAILS": "IGAS_GET_PROPOSAL_DETAILS_UAT",
+                "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY": "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY_UAT",
+                "IGAS_CREATE_PERSON": "IGAS_CREATE_PERSON_UAT",
+                "IGAS_GET_POLICY_PREMIUM_LOAN": "IGAS_GET_POLICY_PREMIUM_LOAN_UAT",
+                "IGAS_GET_PERSON_DETAILS": "IGAS_GET_PERSON_DETAILS_UAT",
+                "IGAS_SET_QUOTE_EXPIRED": "IGAS_SET_QUOTE_EXPIRED_UAT",
+                "IGAS_GET_FUNDS": "IGAS_GET_FUNDS_UAT",
+                "IGAS_SAVE_SIMULATION": "IGAS_SAVE_SIMULATION_UAT",
+                "IGAS_GET_PERSON_OVERVIEW": "IGAS_GET_PERSON_OVERVIEW_UAT",
+                "IGAS_ISSUE_PROPOSAL": "IGAS_ISSUE_PROPOSAL_UAT",
+                "IGAS_REVALIDATE_QUOTE": "IGAS_REVALIDATE_QUOTE_UAT",
+                "IGAS_GENERATE_LOAN_QUOTE": "IGAS_GENERATE_LOAN_QUOTE_UAT",
+                "IGAS_GET_NOTIFICATION_TYPES": "IGAS_GET_NOTIFICATION_TYPES_UAT",
+                "IGAS_GET_PRODUCT_FREQUENCY": "IGAS_GET_PRODUCT_FREQUENCY_UAT",
+                "IGAS_GET_PROPOSALS": "IGAS_GET_PROPOSALS_UAT",
+                "IGAS_SAVE_PROPOSAL_ERRORS": "IGAS_SAVE_PROPOSAL_ERRORS_UAT",
+                "IGAS_REMOVE_QUOTE": "IGAS_REMOVE_QUOTE_UAT",
+                "IGAS_GET_LOAN_TRANS": "IGAS_GET_LOAN_TRANS_UAT",
+                "IGAS_SET_VERIFY_STATUS": "IGAS_SET_VERIFY_STATUS_UAT",
+                "IGAS_GET_LOAN_QUOTE": "IGAS_GET_LOAN_QUOTE_UAT",
+                "IGAS_GET_DEPENDENT_SIMULATION": "IGAS_GET_DEPENDENT_SIMULATION_UAT",
+                "IGAS_GET_LOAN_BALANCES": "IGAS_GET_LOAN_BALANCES_UAT",
+                "IGAS_GET_PREMIUM_LIMIT": "IGAS_GET_PREMIUM_LIMIT_UAT",
+                "IGAS_GENERATE_DEPENDENT_SIMULATION": "IGAS_GENERATE_DEPENDENT_SIMULATION_UAT",
+                "IGAS_GET_PARTIAL_AMOUNT": "IGAS_GET_PARTIAL_AMOUNT_UAT",
+                "IGAS_GENERATE_SIMULATION": "IGAS_GENERATE_SIMULATION_UAT",
+                "IGAS_GET_ASN": "IGAS_GET_ASN_UAT",
+                "IGAS_CREATE_PROPOSAL": "IGAS_CREATE_PROPOSAL_UAT",
+                "IGAS_GET_POLICY_RELATIONSHIP": "IGAS_GET_POLICY_RELATIONSHIP_UAT",
+                "IGAS_GET_ADVANCED_QUOTE": "IGAS_GET_ADVANCED_QUOTE_UAT",
+                "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST": "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST_UAT",
+                "IGAS_GET_POLICY_BENEFITS": "IGAS_GET_POLICY_BENEFITS_UAT",
+                "IGAS_GET_POLICY_DETAILS": "IGAS_GET_POLICY_DETAILS_UAT",
+                "IGAS_GET_PRODUCT_DURATION": "IGAS_GET_PRODUCT_DURATION_UAT",
+                "IGAS_GET_RISK_COVERS": "IGAS_GET_RISK_COVERS_UAT",
+                "IGAS_GET_PLAN_BENFS": "IGAS_GET_PLAN_BENFS_UAT",
+                "IGAS_GET_POLICY_BENEFIT_BENEFS": "IGAS_GET_POLICY_BENEFIT_BENEFS_UAT",
+                "IGAS_GET_SCHEMAS": "IGAS_GET_SCHEMAS_UAT",
+                "IGAS_SAVE_DEPENDENT_SIMULATION": "IGAS_SAVE_DEPENDENT_SIMULATION_UAT",
+                "IGAS_ADD_MPESA_PAYMENT": "IGAS_ADD_MPESA_PAYMENT_UAT"
+            },
+            "DEBUG": true,
+            "SECRET_KEY": "django-insecure-^0r6j+h4zaou6^)(w7y3n@9_&_=n=f6-rsy)=3%j8#%xfrwa(+"
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[igas]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "customer": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[customer_portal]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "IGAS_UPDATEPERSON": "IGAS_UPDATEPERSON_PROD",
+                "IGAS_UPDATE_PAYOUT_METHOD": "IGAS_UPDATE_PAYOUT_METHOD_PROD",
+                "IGAS_UPDATE_BANK_ACCOUNT": "IGAS_UPDATE_BANK_ACCOUNT_PROD",
+                "IGAS_GET_BANK_ACCOUNTS": "IGAS_GET_BANK_ACCOUNTS_PROD",
+                "IGAS_GET_COUNT": "IGAS_GET_COUNT_PROD",
+                "IGAS_GET_PRODUCTS": "IGAS_GET_PRODUCTS_PROD",
+                "IGAS_GET_ADDRESS": "IGAS_GET_ADDRESS_PROD",
+                "IGAS_GET_LOOKUP_LIST": "IGAS_GET_LOOKUP_LIST_PROD",
+                "IGAS_GET_CONTACTS": "IGAS_GET_CONTACTS_PROD",
+                "IGAS_GET_RISK_PREMIUM": "IGAS_GET_RISK_PREMIUM_PROD",
+                "IGAS_CREATE_BANK_ACCOUNT": "IGAS_CREATE_BANK_ACCOUNT_PROD",
+                "IGAS_UPDATE_ADDRESS": "IGAS_UPDATE_ADDRESS_PROD",
+                "IGAS_GET_PROPOSAL_ERRORS": "IGAS_GET_PROPOSAL_ERRORS_PROD",
+                "IGAS_GET_PRODUCT_PARAMS": "IGAS_GET_PRODUCT_PARAMS_PROD",
+                "IGAS_CREATE_CONTACTS": "IGAS_CREATE_CONTACTS_PROD",
+                "IGAS_UPDATE_POLICY_BENEFIT_BENEFS": "IGAS_UPDATE_POLICY_BENEFIT_BENEFS_PROD",
+                "IGAS_GET_AGENTS_LIST": "IGAS_GET_AGENTS_LIST_PROD",
+                "IGAS_GET_PROPOSAL_DETAILS": "IGAS_GET_PROPOSAL_DETAILS_PROD",
+                "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY": "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY_PROD",
+                "IGAS_CREATE_PERSON": "IGAS_CREATE_PERSON_PROD",
+                "IGAS_GET_POLICY_PREMIUM_LOAN": "IGAS_GET_POLICY_PREMIUM_LOAN_PROD",
+                "IGAS_GET_PERSON_DETAILS": "IGAS_GET_PERSON_DETAILS_PROD",
+                "IGAS_SET_QUOTE_EXPIRED": "IGAS_SET_QUOTE_EXPIRED_PROD",
+                "IGAS_GET_FUNDS": "IGAS_GET_FUNDS_PROD",
+                "IGAS_SAVE_SIMULATION": "IGAS_SAVE_SIMULATION_PROD",
+                "IGAS_GET_PERSON_OVERVIEW": "IGAS_GET_PERSON_OVERVIEW_PROD",
+                "IGAS_ISSUE_PROPOSAL": "IGAS_ISSUE_PROPOSAL_PROD",
+                "IGAS_REVALIDATE_QUOTE": "IGAS_REVALIDATE_QUOTE_PROD",
+                "IGAS_GENERATE_LOAN_QUOTE": "IGAS_GENERATE_LOAN_QUOTE_PROD",
+                "IGAS_GET_NOTIFICATION_TYPES": "IGAS_GET_NOTIFICATION_TYPES_PROD",
+                "IGAS_GET_PRODUCT_FREQUENCY": "IGAS_GET_PRODUCT_FREQUENCY_PROD",
+                "IGAS_GET_PROPOSALS": "IGAS_GET_PROPOSALS_PROD",
+                "IGAS_SAVE_PROPOSAL_ERRORS": "IGAS_SAVE_PROPOSAL_ERRORS_PROD",
+                "IGAS_REMOVE_QUOTE": "IGAS_REMOVE_QUOTE_PROD",
+                "IGAS_GET_LOAN_TRANS": "IGAS_GET_LOAN_TRANS_PROD",
+                "IGAS_SET_VERIFY_STATUS": "IGAS_SET_VERIFY_STATUS_PROD",
+                "IGAS_GET_LOAN_QUOTE": "IGAS_GET_LOAN_QUOTE_PROD",
+                "IGAS_GET_DEPENDENT_SIMULATION": "IGAS_GET_DEPENDENT_SIMULATION_PROD",
+                "IGAS_GET_LOAN_BALANCES": "IGAS_GET_LOAN_BALANCES_PROD",
+                "IGAS_GET_PREMIUM_LIMIT": "IGAS_GET_PREMIUM_LIMIT_PROD",
+                "IGAS_GENERATE_DEPENDENT_SIMULATION": "IGAS_GENERATE_DEPENDENT_SIMULATION_PROD",
+                "IGAS_GET_PARTIAL_AMOUNT": "IGAS_GET_PARTIAL_AMOUNT_PROD",
+                "IGAS_GENERATE_SIMULATION": "IGAS_GENERATE_SIMULATION_PROD",
+                "IGAS_GET_ASN": "IGAS_GET_ASN_PROD",
+                "IGAS_CREATE_PROPOSAL": "IGAS_CREATE_PROPOSAL_PROD",
+                "IGAS_GET_POLICY_RELATIONSHIP": "IGAS_GET_POLICY_RELATIONSHIP_PROD",
+                "IGAS_GET_ADVANCED_QUOTE": "IGAS_GET_ADVANCED_QUOTE_PROD",
+                "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST": "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST_PROD",
+                "IGAS_GET_POLICY_BENEFITS": "IGAS_GET_POLICY_BENEFITS_PROD",
+                "IGAS_GET_POLICY_DETAILS": "IGAS_GET_POLICY_DETAILS_PROD",
+                "IGAS_GET_PRODUCT_DURATION": "IGAS_GET_PRODUCT_DURATION_PROD",
+                "IGAS_GET_RISK_COVERS": "IGAS_GET_RISK_COVERS_PROD",
+                "IGAS_GET_PLAN_BENFS": "IGAS_GET_PLAN_BENFS_PROD",
+                "IGAS_GET_POLICY_BENEFIT_BENEFS": "IGAS_GET_POLICY_BENEFIT_BENEFS_PROD",
+                "IGAS_GET_SCHEMAS": "IGAS_GET_SCHEMAS_PROD",
+                "IGAS_SAVE_DEPENDENT_SIMULATION": "IGAS_SAVE_DEPENDENT_SIMULATION_PROD",
+                "IGAS_ADD_MPESA_PAYMENT": "IGAS_ADD_MPESA_PAYMENT_PROD"
+            },
+            "DEBUG": true,
+            "SECRET_KEY": "django-insecure-^0r6j+h4zaou6^)(w7y3n@9_&_=n=f6-rsy)=3%j8#%xfrwa(+"
+        }
+    },
+    "MPESA_PAYMENT": {
+        "UAT": "MPESA_UAT",
+        "PROD": "MPESA_PROD"
+    },
+    "BRITAM_CALLBACK_SUCCESSFULLY_SAVE_TO_DB": {
+        "UAT": "BRITAM_CALLBACK_SUCCESSFULLY_SAVE_TO_DB_UAT",
+        "PROD": "BRITAM_CALLBACK_SUCCESSFULLY_SAVE_TO_DB_PROD"
+    },
+    "MTEK": {
+        "UAT": "MTEK_UAT",
+        "PROD": "MTEK_PROD"
+    },
+    "INSIS": {
+        "UAT": "INSIS_UAT",
+        "PROD": "INSIS_PROD"
+    },
+    "OIPA": {
+        "UAT": "OIPA_UAT",
+        "PROD": "OIPA_PROD"
+    },
+    "KCB_BANK_SUCCESSFULLY_SAVED_NOTIFICATION": {
+        "UAT": "KCB_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_UAT",
+        "PROD": "KCB_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_PROD"
+    },
+    "AUDIENCE": {
+        "UAT": "api://2551a6ae-039d-43bb-b05e-8d97d07f15e2",
+        "PROD": "api://2551a6ae-039d-43bb-b05e-8d97d07f15e2"
+    },
+    "OIPA_SEND_TO_OIPA_NOTIFICATION": {
+        "UAT": "OIPA_SEND_TO_OIPA_NOTIFICATION_UAT",
+        "PROD": "OIPA_SEND_TO_OIPA_NOTIFICATION_PROD"
+    },
+    "SAFARICOM_DARAJA_URL_STKPUSH_URL_ENDPOINT": {
+        "UAT": "/mpesa/stkpush/{version}/processrequest",
+        "PROD": "/mpesa/stkpush/{version}/processrequest"
+    },
+    "SAFARICOM_DARAJA_URL_STK_QUERY_URL_ENDPOINT": {
+        "UAT": "/mpesa/stkpushquery/{version}/query",
+        "PROD": "/mpesa/stkpushquery/{version}/query"
+    },
+    "MANUAL_PAYMENT": {
+        "UAT": "MANUAL",
+        "PROD": "MANUAL"
+    },
+    "BRITAM_JITETEE_MAPEMA": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "JITETEE_CREATE_POLICY": "JITETEE_CREATE_POLICY_UAT",
+                "JITETEE_GET_POLICY_DETAIL": "JITETEE_GET_POLICY_DETAIL_UAT"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "JITETEE_CREATE_POLICY": "JITETEE_CREATE_POLICY",
+                "JITETEE_GET_POLICY_DETAIL": "JITETEE_GET_POLICY_DETAIL"
+            }
+        }
+    },
+    "IGAS_SAVE_NOTIFICATION_TO_DB": {
+        "UAT": "IGAS_SAVE_NOTIFICATION_TO_DB_SUCCESSFULLY_UAT",
+        "PROD": "IGAS_SAVE_NOTIFICATION_TO_DB_SUCCESSFULLY_PROD"
+    },
+    "IGAS_NOTIFICATION_GROUP": {
+        "UAT": "IGAS_NOTIFICATION_GROUP_UAT",
+        "PROD": "IGAS_NOTIFICATION_GROUP_PROD"
+    },
+    "BANK_PAYMENT": {
+        "UAT": "BANK_UAT",
+        "PROD": "BANK_PROD"
+    },
+    "BRTGW_BASEURL": {
+        "UAT": "https://brtgw.britam.com",
+        "PROD": "https://brtgw.britam.com"
+    },
+    "BRITAM_CALLBACK_GROUP": {
+        "UAT": "BRITAM_CALLBACK_GROUP_UAT",
+        "PROD": "BRITAM_CALLBACK_GROUP_PROD"
+    },
+    "LOGGING_SEND_CALLBACK_ERROR_LOG_ISSUES": {
+        "UAT": "LOGGING_SEND_CALLBACK_ERROR_LOG_ISSUES_UAT",
+        "PROD": "LOGGING_SEND_CALLBACK_ERROR_LOG_ISSUES_PROD"
+    },
+    "ERP_INSERT_TO_DB": {
+        "UAT": "ERP_INSERT_RECORD_TO_DB_UAT",
+        "PROD": "ERP_INSERT_RECORD_TO_DB_PROD"
+    },
+    "LOGGING_SEND_ERROR_VALIDATION_LOG_ISSUES": {
+        "UAT": "LOGGING_SEND_ERROR_VALIDATION_LOG_ISSUES_UAT",
+        "PROD": "LOGGING_SEND_ERROR_VALIDATION_LOG_ISSUES_PROD"
+    },
+    "BRITAM_AGENT_APP_VALIDATION_ENDPOINT": {
+        "UAT": "https://brtgw.britam.com/agent/validation/uat/api/v1/configure/",
+        "PROD": "https://brtgw.britam.com/agent/validation/uat/api/v1/configure/"
+    },
+    "AGENT_APP": {
+        "UAT": "AGENT_APP_UAT",
+        "PROD": "AGENT_APP_PROD"
+    },
+    "AGILE_PEN": {
+        "UAT": "AGILE_PEN_UAT",
+        "PROD": "AGILE_PEN_PROD"
+    },
+    "SAFARICOM_DARAJA_URL_REGISTER_URL_ENDPOINT": {
+        "UAT": "/mpesa/c2b/{version}/registerurl",
+        "PROD": "/mpesa/c2b/{version}/registerurl"
+    },
+    "SAFARICOM_DARAJA_URL_SIMULATE_URL_ENDPOINT": {
+        "UAT": "/mpesa/c2b/{version}/simulate",
+        "PROD": "/mpesa/c2b/{version}/simulate"
+    },
+    "MPESA_NOTIFICATION": {
+        "UAT": "PAYMENT_SEND_USER_CALLBACK_UAT",
+        "PROD": "PAYMENT_SEND_USER_CALLBACK_PROD"
+    },
+    "IGAS_RECEIVE_MPESA_NOTIFICATION": {
+        "UAT": "IGAS_RECEIVE_MPESA_NOTIFICATION_UAT",
+        "PROD": "IGAS_RECEIVE_MPESA_NOTIFICATION_PROD"
+    },
+    "KCB_BANK": {
+        "UAT": "KCB_BANK_UAT",
+        "PROD": "KCB_BANK_PROD"
+    },
+    "KAFKA_BOOSTRAP_SERVER": {
+        "UAT": "10.10.4.103:30092",
+        "PROD": "kafka:9093"
+    },
+    "IGAS": {
+        "UAT": "IGAS",
+        "PROD": "IGAS_PROD"
+    },
+    "INTERNAL_VALIDATION_ADDRESS": {
+        "UAT": "https://brtgw.britam.com/policy/validation/uat",
+        "PROD": "https://brtgw.britam.com/policy/validation/uat"
+    },
+    "PAYMENT_CALLBACK_SENT_CONFIRMATION": {
+        "UAT": "PAYMENT_CALLBACK_SENT_CONFIRMATION_UAT",
+        "PROD": "PAYMENT_CALLBACK_SENT_CONFIRMATION_PROD"
+    },
+    "MPESA_PAYMENT_METHOD": {
+        "UAT": "MPESA_UAT",
+        "PROD": "MPESA_PROD"
+    },
+    "AIMS_SEND_TO_AIMS_NOTIFICATION": {
+        "UAT": "AIMS_SEND_TO_AIMS_NOTIFICATION_UAT",
+        "PROD": "AIMS_SEND_TO_AIMS_NOTIFICATION_PROD"
+    },
+    "BRITAM_AGENT_APP": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "GET_POLICY_QUERY": "select quote_number,premium from quote q,quote_detail qt where q.id=qt.quote_id and quote_number="
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "GET_POLICY_QUERY": "select quote_number,premium from quote q,quote_detail qt where q.id=qt.quote_id and quote_number="
+        }
+    },
+    "BRITAM_AGILE_PEN_ENDPOINT": {
+        "UAT": "https://brtgw.britam.com/agile/pen/app/uat/validation",
+        "PROD": "https://brtgw.britam.com/agile/pen/app/uat/validation"
+    },
+    "BRITAM_AGENT_APP_POSTING": {
+        "UAT": "https://brtgw.britam.com/britamagentcis-UAT/v1/mpesa/stk-push-callback?paymentMethod=MANUAL",
+        "PROD": "https://brtgw.britam.com/britamagentcis-UAT/v1/mpesa/stk-push-callback?paymentMethod=MANUAL"
+    },
+    "DIGITAL_PAYMENT": {
+        "UAT": "DIGITAL",
+        "PROD": "DIGITAL"
+    },
+    "BRITAM_AGENT_APP_ENDPOINT": {
+        "UAT": "https://brtgw.britam.com/agent/validation/uat",
+        "PROD": "https://brtgw.britam.com/agent/validation/uat"
+    },
+    "BRITAM_NCBA_DDA": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "APIS": {
+                "BASE_URL": "https://api.AmaliDDs.com:1824",
+                "LOGIN": "/AmaliWebAPI/token",
+                "BANK_ACCOUNT_VALIDATION": "/AmaliWebAPI/AccountValidation",
+                "NEW_MANDATES": "/AmaliWebAPI/newmandate",
+                "AMMEND_MANDATES": "/AmaliWebAPI/amenddirectdebit",
+                "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
+                "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
+                "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid"
+            },
+            "ROLES": {
+                "BANK_ACCOUNT_VALIDATION": "NCBA_DDA_BANK_ACCOUNT_VALIDATION_UAT",
+                "NEW_MANDATES": "NCBA_DDA_NEW_MANDATES_UAT",
+                "AMMEND_MANDATES": "NCBA_DDA_AMMEND_MANDATES_UAT",
+                "CANCEL_MANDATES": "NCBA_DDA_CANCEL_MANDATES_UAT",
+                "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_UAT",
+                "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_UAT",
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_UAT"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "AgentsApp",
+                    "USER": "agent_bb",
+                    "PASSWORD": "britam123",
+                    "HOST": "172.28.2.11",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "APIS": {
+                "BASE_URL": "https://api.AmaliDDs.com:1824",
+                "LOGIN": "/AmaliWebAPI/token",
+                "BANK_ACCOUNT_VALIDATION": "/AmaliWebAPI/AccountValidation",
+                "NEW_MANDATES": "/AmaliWebAPI/newmandate",
+                "AMMEND_MANDATES": "/AmaliWebAPI/amenddirectdebit",
+                "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
+                "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
+                "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid"
+            },
+            "ROLES": {
+                "BANK_ACCOUNT_VALIDATION": "NCBA_DDA_BANK_ACCOUNT_VALIDATION_PROD",
+                "NEW_MANDATES": "NCBA_DDA_NEW_MANDATES_PROD",
+                "AMMEND_MANDATES": "NCBA_DDA_AMMEND_MANDATES_PROD",
+                "CANCEL_MANDATES": "NCBA_DDA_CANCEL_MANDATES_PROD",
+                "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_PROD",
+                "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_PROD",
+                "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_PROD"
+            }
+        }
+    }
+}

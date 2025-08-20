@@ -1,0 +1,45 @@
+version: '3'
+networks:
+    app-network:
+      external: true
+services:
+  # api_nilas_uat:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.uat
+  #   image: acruksaksbritam3753.azurecr.io/api_nilas_uat:2.0
+  #   restart: always
+  #   volumes:
+  #     - ./:/usr/src/britam/api_nilas/uat
+  #   ports:
+  #     - 9500:9500
+      # - 8010:8010
+
+
+  aims_britam_ncba_dda_uat:
+    build:
+      context: .
+      dockerfile: Dockerfile.uat
+    image: acruksaksbritam3753.azurecr.io/aims_britam_ncba_dda_uat:1.0
+    restart: always
+    volumes:
+      - ./:/usr/src/britam/ncba_dda/uat
+    ports:
+      - 9203:9203
+    networks:
+      - app-network
+      # - 8010:8010
+
+
+   
+    
+
+
+
+
+  
+     
+
+
+volumes:
+  pgdata:
