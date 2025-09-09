@@ -30,7 +30,7 @@ urlpatterns = [
         name="amali-account-validation",
     ),
     path(
-        "dd/v1/amali/mandates/new/",
+        "AmaliWebAPI/newmandate/",
         AmaliNewMandateApiView.as_view(),
         name="amali-new-mandate",
     ),
@@ -39,6 +39,7 @@ urlpatterns = [
         AmaliAmendMandateApiView.as_view(),
         name="amali-amend-mandate",
     ),
+    
     path(
         "dd/v1/amali/mandates/cancel/",
         AmaliCancelMandateApiView.as_view(),
