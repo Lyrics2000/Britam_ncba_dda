@@ -428,23 +428,15 @@
                     "USER": "tachongo[VALIDATION]",
                     "PASSWORD": "H#rd2_gu355",
                     "HOST": "172.26.0.47",
-                    "PORT": "1521",
-                    "OPTIONS": {
-                        "threaded": true,
-                        "timeout": 30
-                    }
+                    "PORT": "1521"
                 },
-                "erp_table": {
+                "igas": {
                     "ENGINE": "django.db.backends.oracle",
-                    "NAME": "PREPROD",
-                    "USER": "apps",
-                    "PASSWORD": "ADVANTAGE#_N01",
-                    "HOST": "10.10.4.12",
-                    "PORT": "1531",
-                    "OPTIONS": {
-                        "threaded": true,
-                        "timeout": 30
-                    }
+                    "NAME": "IGASUAT",
+                    "USER": "baowner",
+                    "PASSWORD": "baowner",
+                    "HOST": "10.10.4.236",
+                    "PORT": "1521"
                 }
             },
             "ROLES": {
@@ -530,6 +522,244 @@
     "SAFARICOM_DARAJA_URL_AUTHORIZATION_URL_ENDPOINT": {
         "UAT": "/oauth/{version}/generate?grant_type=client_credentials",
         "PROD": "/oauth/{version}/generate?grant_type=client_credentials"
+    },
+    "MTEK_SUCCESSFULLY_SEND_NOTIFICATION": {
+        "UAT": "MTEK_SUCCESSFULLY_SEND_NOTIFICATION_UAT",
+        "PROD": "MTEK_SUCCESSFULLY_SEND_NOTIFICATION_PROD"
+    },
+    "BRITAM_AIMS_UGANDA": {
+        "UAT": {
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "CERTIFICATE_FILE": "new_certificate.pfx",
+            "AIMS_BASEURL": "https://10.10.3.101:6010",
+            "CERTIFICATE_PASSPHRASE": "abcd12345",
+            "API_KEY": "RE429500",
+            "CLIENT_ID": "2",
+            "API_REFERENCE": "slESfjRM"
+        },
+        "PROD": {
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "CERTIFICATE_FILE": "new_certificate.pfx",
+            "AIMS_BASEURL": "https://10.10.3.101:6010",
+            "CERTIFICATE_PASSPHRASE": "abcd12345",
+            "API_KEY": "RE429500",
+            "CLIENT_ID": "2",
+            "API_REFERENCE": "slESfjRM"
+        }
+    },
+    "BRITAM_KAFKA_CONFIG": {
+        "UAT": "https://brtgw.britam.com/config/kafka/api/v1/config/internal/",
+        "PROD": "https://brtgw.britam.com/config/kafka/api/v1/config/internal/"
+    },
+    "BRITAM_IGAS_CONFIGS": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[igas]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "customer": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[customer_portal]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-^0r6j+h4zaou6^)(w7y3n@9_&_=n=f6-rsy)=3%j8#%xfrwa(+",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "IGAS_UPDATEPERSON": "IGAS_UPDATEPERSON_UAT",
+                "IGAS_UPDATE_PAYOUT_METHOD": "IGAS_UPDATE_PAYOUT_METHOD_UAT",
+                "IGAS_UPDATE_BANK_ACCOUNT": "IGAS_UPDATE_BANK_ACCOUNT_UAT",
+                "IGAS_GET_BANK_ACCOUNTS": "IGAS_GET_BANK_ACCOUNTS_UAT",
+                "IGAS_GET_COUNT": "IGAS_GET_COUNT_UAT",
+                "IGAS_GET_PRODUCTS": "IGAS_GET_PRODUCTS_UAT",
+                "IGAS_GET_ADDRESS": "IGAS_GET_ADDRESS_UAT",
+                "IGAS_GET_LOOKUP_LIST": "IGAS_GET_LOOKUP_LIST_UAT",
+                "IGAS_GET_CONTACTS": "IGAS_GET_CONTACTS_UAT",
+                "IGAS_GET_RISK_PREMIUM": "IGAS_GET_RISK_PREMIUM_UAT",
+                "IGAS_CREATE_BANK_ACCOUNT": "IGAS_CREATE_BANK_ACCOUNT_UAT",
+                "IGAS_UPDATE_ADDRESS": "IGAS_UPDATE_ADDRESS_UAT",
+                "IGAS_GET_PROPOSAL_ERRORS": "IGAS_GET_PROPOSAL_ERRORS_UAT",
+                "IGAS_GET_PRODUCT_PARAMS": "IGAS_GET_PRODUCT_PARAMS_UAT",
+                "IGAS_CREATE_CONTACTS": "IGAS_CREATE_CONTACTS_UAT",
+                "IGAS_UPDATE_POLICY_BENEFIT_BENEFS": "IGAS_UPDATE_POLICY_BENEFIT_BENEFS_UAT",
+                "IGAS_GET_AGENTS_LIST": "IGAS_GET_AGENTS_LIST_UAT",
+                "IGAS_GET_PROPOSAL_DETAILS": "IGAS_GET_PROPOSAL_DETAILS_UAT",
+                "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY": "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY_UAT",
+                "IGAS_CREATE_PERSON": "IGAS_CREATE_PERSON_UAT",
+                "IGAS_GET_POLICY_PREMIUM_LOAN": "IGAS_GET_POLICY_PREMIUM_LOAN_UAT",
+                "IGAS_GET_PERSON_DETAILS": "IGAS_GET_PERSON_DETAILS_UAT",
+                "IGAS_SET_QUOTE_EXPIRED": "IGAS_SET_QUOTE_EXPIRED_UAT",
+                "IGAS_GET_FUNDS": "IGAS_GET_FUNDS_UAT",
+                "IGAS_SAVE_SIMULATION": "IGAS_SAVE_SIMULATION_UAT",
+                "IGAS_GET_PERSON_OVERVIEW": "IGAS_GET_PERSON_OVERVIEW_UAT",
+                "IGAS_ISSUE_PROPOSAL": "IGAS_ISSUE_PROPOSAL_UAT",
+                "IGAS_REVALIDATE_QUOTE": "IGAS_REVALIDATE_QUOTE_UAT",
+                "IGAS_GENERATE_LOAN_QUOTE": "IGAS_GENERATE_LOAN_QUOTE_UAT",
+                "IGAS_GET_NOTIFICATION_TYPES": "IGAS_GET_NOTIFICATION_TYPES_UAT",
+                "IGAS_GET_PRODUCT_FREQUENCY": "IGAS_GET_PRODUCT_FREQUENCY_UAT",
+                "IGAS_GET_PROPOSALS": "IGAS_GET_PROPOSALS_UAT",
+                "IGAS_SAVE_PROPOSAL_ERRORS": "IGAS_SAVE_PROPOSAL_ERRORS_UAT",
+                "IGAS_REMOVE_QUOTE": "IGAS_REMOVE_QUOTE_UAT",
+                "IGAS_GET_LOAN_TRANS": "IGAS_GET_LOAN_TRANS_UAT",
+                "IGAS_SET_VERIFY_STATUS": "IGAS_SET_VERIFY_STATUS_UAT",
+                "IGAS_GET_LOAN_QUOTE": "IGAS_GET_LOAN_QUOTE_UAT",
+                "IGAS_GET_DEPENDENT_SIMULATION": "IGAS_GET_DEPENDENT_SIMULATION_UAT",
+                "IGAS_GET_LOAN_BALANCES": "IGAS_GET_LOAN_BALANCES_UAT",
+                "IGAS_GET_PREMIUM_LIMIT": "IGAS_GET_PREMIUM_LIMIT_UAT",
+                "IGAS_GENERATE_DEPENDENT_SIMULATION": "IGAS_GENERATE_DEPENDENT_SIMULATION_UAT",
+                "IGAS_GET_PARTIAL_AMOUNT": "IGAS_GET_PARTIAL_AMOUNT_UAT",
+                "IGAS_GENERATE_SIMULATION": "IGAS_GENERATE_SIMULATION_UAT",
+                "IGAS_GET_ASN": "IGAS_GET_ASN_UAT",
+                "IGAS_CREATE_PROPOSAL": "IGAS_CREATE_PROPOSAL_UAT",
+                "IGAS_GET_POLICY_RELATIONSHIP": "IGAS_GET_POLICY_RELATIONSHIP_UAT",
+                "IGAS_GET_ADVANCED_QUOTE": "IGAS_GET_ADVANCED_QUOTE_UAT",
+                "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST": "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST_UAT",
+                "IGAS_GET_POLICY_BENEFITS": "IGAS_GET_POLICY_BENEFITS_UAT",
+                "IGAS_GET_POLICY_DETAILS": "IGAS_GET_POLICY_DETAILS_UAT",
+                "IGAS_GET_PRODUCT_DURATION": "IGAS_GET_PRODUCT_DURATION_UAT",
+                "IGAS_GET_RISK_COVERS": "IGAS_GET_RISK_COVERS_UAT",
+                "IGAS_GET_PLAN_BENFS": "IGAS_GET_PLAN_BENFS_UAT",
+                "IGAS_GET_POLICY_BENEFIT_BENEFS": "IGAS_GET_POLICY_BENEFIT_BENEFS_UAT",
+                "IGAS_GET_SCHEMAS": "IGAS_GET_SCHEMAS_UAT",
+                "IGAS_SAVE_DEPENDENT_SIMULATION": "IGAS_SAVE_DEPENDENT_SIMULATION_UAT",
+                "IGAS_ADD_MPESA_PAYMENT": "IGAS_ADD_MPESA_PAYMENT_UAT"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[igas]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "customer": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[customer_portal]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": false,
+                "SECRET_KEY": "django-insecure-^0r6j+h4zaou6^)(w7y3n@9_&_=n=f6-rsy)=3%j8#%xfrwa(+",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "IGAS_UPDATEPERSON": "IGAS_UPDATEPERSON_PROD",
+                "IGAS_UPDATE_PAYOUT_METHOD": "IGAS_UPDATE_PAYOUT_METHOD_PROD",
+                "IGAS_UPDATE_BANK_ACCOUNT": "IGAS_UPDATE_BANK_ACCOUNT_PROD",
+                "IGAS_GET_BANK_ACCOUNTS": "IGAS_GET_BANK_ACCOUNTS_PROD",
+                "IGAS_GET_COUNT": "IGAS_GET_COUNT_PROD",
+                "IGAS_GET_PRODUCTS": "IGAS_GET_PRODUCTS_PROD",
+                "IGAS_GET_ADDRESS": "IGAS_GET_ADDRESS_PROD",
+                "IGAS_GET_LOOKUP_LIST": "IGAS_GET_LOOKUP_LIST_PROD",
+                "IGAS_GET_CONTACTS": "IGAS_GET_CONTACTS_PROD",
+                "IGAS_GET_RISK_PREMIUM": "IGAS_GET_RISK_PREMIUM_PROD",
+                "IGAS_CREATE_BANK_ACCOUNT": "IGAS_CREATE_BANK_ACCOUNT_PROD",
+                "IGAS_UPDATE_ADDRESS": "IGAS_UPDATE_ADDRESS_PROD",
+                "IGAS_GET_PROPOSAL_ERRORS": "IGAS_GET_PROPOSAL_ERRORS_PROD",
+                "IGAS_GET_PRODUCT_PARAMS": "IGAS_GET_PRODUCT_PARAMS_PROD",
+                "IGAS_CREATE_CONTACTS": "IGAS_CREATE_CONTACTS_PROD",
+                "IGAS_UPDATE_POLICY_BENEFIT_BENEFS": "IGAS_UPDATE_POLICY_BENEFIT_BENEFS_PROD",
+                "IGAS_GET_AGENTS_LIST": "IGAS_GET_AGENTS_LIST_PROD",
+                "IGAS_GET_PROPOSAL_DETAILS": "IGAS_GET_PROPOSAL_DETAILS_PROD",
+                "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY": "IGAS_GET_CONTRACT_BENEFITS_TO_NOTIFY_PROD",
+                "IGAS_CREATE_PERSON": "IGAS_CREATE_PERSON_PROD",
+                "IGAS_GET_POLICY_PREMIUM_LOAN": "IGAS_GET_POLICY_PREMIUM_LOAN_PROD",
+                "IGAS_GET_PERSON_DETAILS": "IGAS_GET_PERSON_DETAILS_PROD",
+                "IGAS_SET_QUOTE_EXPIRED": "IGAS_SET_QUOTE_EXPIRED_PROD",
+                "IGAS_GET_FUNDS": "IGAS_GET_FUNDS_PROD",
+                "IGAS_SAVE_SIMULATION": "IGAS_SAVE_SIMULATION_PROD",
+                "IGAS_GET_PERSON_OVERVIEW": "IGAS_GET_PERSON_OVERVIEW_PROD",
+                "IGAS_ISSUE_PROPOSAL": "IGAS_ISSUE_PROPOSAL_PROD",
+                "IGAS_REVALIDATE_QUOTE": "IGAS_REVALIDATE_QUOTE_PROD",
+                "IGAS_GENERATE_LOAN_QUOTE": "IGAS_GENERATE_LOAN_QUOTE_PROD",
+                "IGAS_GET_NOTIFICATION_TYPES": "IGAS_GET_NOTIFICATION_TYPES_PROD",
+                "IGAS_GET_PRODUCT_FREQUENCY": "IGAS_GET_PRODUCT_FREQUENCY_PROD",
+                "IGAS_GET_PROPOSALS": "IGAS_GET_PROPOSALS_PROD",
+                "IGAS_SAVE_PROPOSAL_ERRORS": "IGAS_SAVE_PROPOSAL_ERRORS_PROD",
+                "IGAS_REMOVE_QUOTE": "IGAS_REMOVE_QUOTE_PROD",
+                "IGAS_GET_LOAN_TRANS": "IGAS_GET_LOAN_TRANS_PROD",
+                "IGAS_SET_VERIFY_STATUS": "IGAS_SET_VERIFY_STATUS_PROD",
+                "IGAS_GET_LOAN_QUOTE": "IGAS_GET_LOAN_QUOTE_PROD",
+                "IGAS_GET_DEPENDENT_SIMULATION": "IGAS_GET_DEPENDENT_SIMULATION_PROD",
+                "IGAS_GET_LOAN_BALANCES": "IGAS_GET_LOAN_BALANCES_PROD",
+                "IGAS_GET_PREMIUM_LIMIT": "IGAS_GET_PREMIUM_LIMIT_PROD",
+                "IGAS_GENERATE_DEPENDENT_SIMULATION": "IGAS_GENERATE_DEPENDENT_SIMULATION_PROD",
+                "IGAS_GET_PARTIAL_AMOUNT": "IGAS_GET_PARTIAL_AMOUNT_PROD",
+                "IGAS_GENERATE_SIMULATION": "IGAS_GENERATE_SIMULATION_PROD",
+                "IGAS_GET_ASN": "IGAS_GET_ASN_PROD",
+                "IGAS_CREATE_PROPOSAL": "IGAS_CREATE_PROPOSAL_PROD",
+                "IGAS_GET_POLICY_RELATIONSHIP": "IGAS_GET_POLICY_RELATIONSHIP_PROD",
+                "IGAS_GET_ADVANCED_QUOTE": "IGAS_GET_ADVANCED_QUOTE_PROD",
+                "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST": "IGAS_PROCESS_PARTIAL_AMOUNT_REQUEST_PROD",
+                "IGAS_GET_POLICY_BENEFITS": "IGAS_GET_POLICY_BENEFITS_PROD",
+                "IGAS_GET_POLICY_DETAILS": "IGAS_GET_POLICY_DETAILS_PROD",
+                "IGAS_GET_PRODUCT_DURATION": "IGAS_GET_PRODUCT_DURATION_PROD",
+                "IGAS_GET_RISK_COVERS": "IGAS_GET_RISK_COVERS_PROD",
+                "IGAS_GET_PLAN_BENFS": "IGAS_GET_PLAN_BENFS_PROD",
+                "IGAS_GET_POLICY_BENEFIT_BENEFS": "IGAS_GET_POLICY_BENEFIT_BENEFS_PROD",
+                "IGAS_GET_SCHEMAS": "IGAS_GET_SCHEMAS_PROD",
+                "IGAS_SAVE_DEPENDENT_SIMULATION": "IGAS_SAVE_DEPENDENT_SIMULATION_PROD",
+                "IGAS_ADD_MPESA_PAYMENT": "IGAS_ADD_MPESA_PAYMENT_PROD"
+            }
+        }
     },
     "IGAS_SEND_TO_IGAS_NOTIFICATION": {
         "UAT": "IGAS_SEND_TO_IGAS_NOTIFICATION_UAT",
@@ -679,6 +909,312 @@
     "INTERNAL_VALIDATION_ADDRESS_ENDPOINT": {
         "UAT": "/api/v1-clone/validate/internal/",
         "PROD": "/api/v1-clone/validate/internal/"
+    },
+    "BRITAM_AIMS_TANZANIA": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[INSIS_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "AIMS_TANZANIA_CLIENT_ONBOARDING": "AIMS_TANZANIA_CLIENT_ONBOARDING_UAT",
+                "AIMS_TANZANIA_ENGINEERING_UNDERWRITING_PC": "AIMS_TANZANIA_ENGINEERING_UNDERWRITING_PC_UAT",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING": "AIMS_TANZANIA_FIRE_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_COPY": "AIMS_TANZANIA_FIRE_UNDERWRITING_COPY_UAT",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_PC": "AIMS_TANZANIA_FIRE_UNDERWRITING_PC_UAT",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_SCHOOL": "AIMS_TANZANIA_FIRE_UNDERWRITING_SCHOOL_UAT",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_TP": "AIMS_TANZANIA_FIRE_UNDERWRITING_TP_UAT",
+                "AIMS_TANZANIA_GPA_UNDERWRITING": "AIMS_TANZANIA_GPA_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_GPA_UNDERWRITING_COPY": "AIMS_TANZANIA_GPA_UNDERWRITING_COPY_UAT",
+                "AIMS_TANZANIA_GPA_UNDERWRITING_PC": "AIMS_TANZANIA_GPA_UNDERWRITING_PC_UAT",
+                "AIMS_TANZANIA_HEALTH_UNDERWRITING": "AIMS_TANZANIA_HEALTH_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_LOGIN": "AIMS_TANZANIA_LOGIN_UAT",
+                "AIMS_TANZANIA_MARINE_CARGO_UNDERWRITING": "AIMS_TANZANIA_MARINE_CARGO_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_MOTOR_UNDERWRITING": "AIMS_TANZANIA_MOTOR_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_MOTORPII_UNDERWRITING": "AIMS_TANZANIA_MOTORPII_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILL": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILL_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILLWITHID": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILLWITHID_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_FITA_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_FITA_LIST_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_LIST_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MARTURITYAGES": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MARTURITYAGES_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MATPERILS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MATPERILS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENSIONOCCUPATIONS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENSIONOCCUPATIONS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITSM": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITSM_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PAYBILLACCOUNTS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PAYBILLACCOUNTS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_SECTOR_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_SECTOR_LIST_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_USSD_END": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_USSD_END_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MAKE": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MAKE_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MODELS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MODELS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_PERILS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_PERILS_UAT",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_TYPES": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_TYPES_UAT",
+                "AIMS_TANZANIA_PERSONAL_ACCIDENT_UNDERWRITING": "AIMS_TANZANIA_PERSONAL_ACCIDENT_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_PROFESSIONAL_INDEMNITY_UNDERWRITING": "AIMS_TANZANIA_PROFESSIONAL_INDEMNITY_UNDERWRITING_UAT",
+                "AIMS_TANZANIA_REGISTER_CLAIMS": "AIMS_TANZANIA_REGISTER_CLAIMS_UAT",
+                "AIMS_TANZANIA_REGISTER_CLIENT_POLICY": "AIMS_TANZANIA_REGISTER_CLIENT_POLICY_UAT",
+                "AIMS_TANZANIA_TRAVEL_UNDERWRITING": "AIMS_TANZANIA_TRAVEL_UNDERWRITING_UAT",
+                "API_NILAS_GET_CLIENT_PREFIX": "API_NILAS_GET_CLIENT_PREFIX_UAT",
+                "AIMS_TANZANIA_GENERATE_POLICY": "AIMS_TANZANIA_GENERATE_POLICY_UAT",
+                "AIMS_TANZANIA_GENERATE_CLIENT_POLICY": "AIMS_TANZANIA_GENERATE_CLIENT_POLICY_UAT"
+            },
+            "CREDENTIALS": {
+                "USERNAME": "info@britam.com",
+                "PASSWORD": "V7@xZ!9tQ#2wL$8rJ%6nP&4m"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[INSIS_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "prod.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://prod.example.com"
+                ]
+            },
+            "ROLES": {
+                "AIMS_TANZANIA_CLIENT_ONBOARDING": "AIMS_TANZANIA_CLIENT_ONBOARDING_PROD",
+                "AIMS_TANZANIA_ENGINEERING_UNDERWRITING_PC": "AIMS_TANZANIA_ENGINEERING_UNDERWRITING_PC_PROD",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING": "AIMS_TANZANIA_FIRE_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_COPY": "AIMS_TANZANIA_FIRE_UNDERWRITING_COPY_PROD",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_PC": "AIMS_TANZANIA_FIRE_UNDERWRITING_PC_PROD",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_SCHOOL": "AIMS_TANZANIA_FIRE_UNDERWRITING_SCHOOL_PROD",
+                "AIMS_TANZANIA_FIRE_UNDERWRITING_TP": "AIMS_TANZANIA_FIRE_UNDERWRITING_TP_PROD",
+                "AIMS_TANZANIA_GPA_UNDERWRITING": "AIMS_TANZANIA_GPA_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_GPA_UNDERWRITING_COPY": "AIMS_TANZANIA_GPA_UNDERWRITING_COPY_PROD",
+                "AIMS_TANZANIA_GPA_UNDERWRITING_PC": "AIMS_TANZANIA_GPA_UNDERWRITING_PC_PROD",
+                "AIMS_TANZANIA_HEALTH_UNDERWRITING": "AIMS_TANZANIA_HEALTH_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_LOGIN": "AIMS_TANZANIA_LOGIN_PROD",
+                "AIMS_TANZANIA_MARINE_CARGO_UNDERWRITING": "AIMS_TANZANIA_MARINE_CARGO_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_MOTOR_UNDERWRITING": "AIMS_TANZANIA_MOTOR_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_MOTORPII_UNDERWRITING": "AIMS_TANZANIA_MOTORPII_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILL": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILL_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILLWITHID": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_HONONPAYBILLWITHID_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_FITA_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_FITA_LIST_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_LGA_LIST_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MARTURITYAGES": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MARTURITYAGES_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MATPERILS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_MATPERILS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENSIONOCCUPATIONS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENSIONOCCUPATIONS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITSM": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PENUNITSM_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PAYBILLACCOUNTS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_PAYBILLACCOUNTS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_SECTOR_LIST": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_SECTOR_LIST_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_USSD_END": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_USSD_END_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MAKE": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MAKE_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MODELS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_MODELS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_PERILS": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_PERILS_PROD",
+                "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_TYPES": "AIMS_TANZANIA_PARAMETER_ENDPOINTS_VEHICLE_TYPES_PROD",
+                "AIMS_TANZANIA_PERSONAL_ACCIDENT_UNDERWRITING": "AIMS_TANZANIA_PERSONAL_ACCIDENT_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_PROFESSIONAL_INDEMNITY_UNDERWRITING": "AIMS_TANZANIA_PROFESSIONAL_INDEMNITY_UNDERWRITING_PROD",
+                "AIMS_TANZANIA_REGISTER_CLAIMS": "AIMS_TANZANIA_REGISTER_CLAIMS_PROD",
+                "AIMS_TANZANIA_REGISTER_CLIENT_POLICY": "AIMS_TANZANIA_REGISTER_CLIENT_POLICY_PROD",
+                "AIMS_TANZANIA_TRAVEL_UNDERWRITING": "AIMS_TANZANIA_TRAVEL_UNDERWRITING_PROD",
+                "API_NILAS_GET_CLIENT_PREFIX": "API_NILAS_GET_CLIENT_PREFIX_PROD",
+                "AIMS_TANZANIA_GENERATE_POLICY": "AIMS_TANZANIA_GENERATE_POLICY_PROD",
+                "AIMS_TANZANIA_GENERATE_CLIENT_POLICY": "AIMS_TANZANIA_GENERATE_CLIENT_POLICY_PROD"
+            },
+            "CREDENTIALS": {
+                "USERNAME": "info@britam.com",
+                "PASSWORD": "V7@xZ!9tQ#2wL$8rJ%6nP&4m"
+            }
+        }
+    },
+    "BRITAM_AIMS_TANZANIA_ERROR_TOPIC": {
+        "UAT": "BRITAM_AIMS_TANZANIA_ERROR_TOPIC_UAT",
+        "PROD": "BRITAM_AIMS_TANZANIA_ERROR_TOPIC_PROD"
+    },
+    "BRITAM_TANZANIA_BASE_URL": {
+        "UAT": "https://10.10.4.21:3000/",
+        "PROD": "https://10.10.4.21:3000/"
+    },
+    "BRITAM_UNIT_MASTER_SUCCESSFULL_PAYMENT": {
+        "UAT": "BRITAM_UNIT_MASTER_SUCCESSFULL_PAYMENT_UAT",
+        "PROD": "BRITAM_UNIT_MASTER_SUCCESSFULL_PAYMENT_PROD"
+    },
+    "BRITAM_PAYMENT_SAVE_INITIAL_MPESA_REQUEST": {
+        "UAT": "BRITAM_PAYMENT_SAVE_INITIAL_MPESA_REQUEST_UAT",
+        "PROD": "BRITAM_PAYMENT_SAVE_INITIAL_MPESA_REQUEST_PROD"
+    },
+    "BRITAM_PAYMENT_PROCESS_ONLINE_CHECKOUT": {
+        "UAT": "BRITAM_PAYMENT_PROCESS_ONLINE_CHECKOUT_UAT",
+        "PROD": "BRITAM_PAYMENT_PROCESS_ONLINE_CHECKOUT_PROD"
+    },
+    "BRITAM_PAYBILL_CONFIGS": {
+        "UAT": {
+            "4157051": {
+                "client_ref": "98d7YxWsG7AAEphSapMn2ZkwCp0Gf3RWX2C9MZ7UHnK1q8Ry",
+                "client_secret": "JNM79gZ3l1DRXmspPHCz4famGJF76rJBADDZhZxKGMOkEUbAdtHiv1G9I4GQ138j",
+                "development": false,
+                "password": "c47ed88df1dff637fb7866372711895c8633bdbd1de72f884333157206f7dcd5",
+                "safaricom_version": "v1"
+            },
+            "174379": {
+                "client_ref": "oGrbf3zHUFzPhrxLT94acL2UQmCQLwq2",
+                "client_secret": "lMQYWvur09ADAZSk",
+                "development": true,
+                "password": "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+                "safaricom_version": "v1"
+            },
+            "7655899": {
+                "client_ref": "fv7TVn76sxk7wA3pzx9N3FUL24d0ce6U",
+                "client_secret": "z7AvqqgKGan9GwqN",
+                "development": false,
+                "password": "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+                "safaricom_version": "v1"
+            },
+            "742056": {
+                "client_ref": "0A7PF8bKYLXbo2SsEDfQenJNIOdGlwL5",
+                "client_secret": "B7ZHnkOA0aCvGjXn",
+                "development": false,
+                "password": "9b36391a2dbb2559efe8275f3a91b23f77c4358c0ded6eb2f2f3cf2e3afa7c5d",
+                "safaricom_version": "v1"
+            },
+            "827142": {
+                "client_ref": "ogBgc6AcFZBGCtt8FtZbGr5HDrGnfL4N",
+                "client_secret": "nA8VhV2ckotN8f8x",
+                "development": false,
+                "password": "38e6af5aab0bc7d0dd8195813c05c6d3e16fa94cbd21be5ad8b436264f3aa4eb",
+                "safaricom_version": "v1"
+            },
+            "541400": {
+                "client_ref": "JgEVT15cU1BQNABYLaV0oOTAM6eirh1x",
+                "client_secret": "eBPwCkRhMjDECFr9",
+                "development": false,
+                "password": "8ae51f44845737343de77400812bb550d913731710f4ac912a285834854d4159",
+                "safaricom_version": "v1"
+            },
+            "111555": {
+                "client_ref": "iJjeqMPFd3sSsAWqZDJl98rhWhgCwMKh",
+                "client_secret": "eRKlUarkDJMH80aP",
+                "development": false,
+                "password": "bbdc48077e0170622e682c32d81b9f71f4812041168b5ec514cb96c63e4ccf5f",
+                "safaricom_version": "v1"
+            },
+            "899885": {
+                "client_ref": "ogBgc6AcFZBGCtt8FtZbGr5HDrGnfL4N",
+                "client_secret": "nA8VhV2ckotN8f8x",
+                "development": false,
+                "password": "4b5dd18ffe2f5da3f1a63ca9742772ef73c1728ccc9b6b81c372fbd8eff901f3",
+                "safaricom_version": "v1"
+            },
+            "584065": {
+                "client_ref": "F5yCIqonl2pF8K73G7X3GKLo2IHLMJOh",
+                "client_secret": "XXRniPIZBITW1YLX",
+                "development": false,
+                "password": "0ea080d36f4a30b667724c296a6a28c35c5646fd3f07d73e9e790987147e8c23",
+                "safaricom_version": "v1"
+            }
+        },
+        "PROD": {
+            "174379": {
+                "client_ref": "oGrbf3zHUFzPhrxLT94acL2UQmCQLwq2",
+                "client_secret": "lMQYWvur09ADAZSk",
+                "development": true,
+                "password": "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+                "safaricom_version": "v1"
+            },
+            "7655899": {
+                "client_ref": "fv7TVn76sxk7wA3pzx9N3FUL24d0ce6U",
+                "client_secret": "z7AvqqgKGan9GwqN",
+                "development": false,
+                "password": "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+                "safaricom_version": "v1"
+            },
+            "742056": {
+                "client_ref": "0A7PF8bKYLXbo2SsEDfQenJNIOdGlwL5",
+                "client_secret": "B7ZHnkOA0aCvGjXn",
+                "development": false,
+                "password": "9b36391a2dbb2559efe8275f3a91b23f77c4358c0ded6eb2f2f3cf2e3afa7c5d",
+                "safaricom_version": "v1"
+            },
+            "827142": {
+                "client_ref": "ogBgc6AcFZBGCtt8FtZbGr5HDrGnfL4N",
+                "client_secret": "nA8VhV2ckotN8f8x",
+                "development": false,
+                "password": "38e6af5aab0bc7d0dd8195813c05c6d3e16fa94cbd21be5ad8b436264f3aa4eb",
+                "safaricom_version": "v1"
+            },
+            "541400": {
+                "client_ref": "JgEVT15cU1BQNABYLaV0oOTAM6eirh1x",
+                "client_secret": "eBPwCkRhMjDECFr9",
+                "development": false,
+                "password": "8ae51f44845737343de77400812bb550d913731710f4ac912a285834854d4159",
+                "safaricom_version": "v1"
+            },
+            "111555": {
+                "client_ref": "iJjeqMPFd3sSsAWqZDJl98rhWhgCwMKh",
+                "client_secret": "eRKlUarkDJMH80aP",
+                "development": false,
+                "password": "bbdc48077e0170622e682c32d81b9f71f4812041168b5ec514cb96c63e4ccf5f",
+                "safaricom_version": "v1"
+            },
+            "899885": {
+                "client_ref": "ogBgc6AcFZBGCtt8FtZbGr5HDrGnfL4N",
+                "client_secret": "nA8VhV2ckotN8f8x",
+                "development": false,
+                "password": "4b5dd18ffe2f5da3f1a63ca9742772ef73c1728ccc9b6b81c372fbd8eff901f3",
+                "safaricom_version": "v1"
+            },
+            "584065": {
+                "client_ref": "F5yCIqonl2pF8K73G7X3GKLo2IHLMJOh",
+                "client_secret": "XXRniPIZBITW1YLX",
+                "development": false,
+                "password": "0ea080d36f4a30b667724c296a6a28c35c5646fd3f07d73e9e790987147e8c23",
+                "safaricom_version": "v1"
+            },
+            "4157051": {
+                "client_ref": "98d7YxWsG7AAEphSapMn2ZkwCp0Gf3RWX2C9MZ7UHnK1q8Ry",
+                "client_secret": "JNM79gZ3l1DRXmspPHCz4famGJF76rJBADDZhZxKGMOkEUbAdtHiv1G9I4GQ138j",
+                "development": false,
+                "password": "c47ed88df1dff637fb7866372711895c8633bdbd1de72f884333157206f7dcd5",
+                "safaricom_version": "v1"
+            }
+        }
+    },
+    "SMART_EDI_PROCESS_CLAIMS": {
+        "UAT": "SMART_EDI_PROCESS_CLAIMS_UAT",
+        "PROD": "SMART_EDI_PROCESS_CLAIMS_PROD"
+    },
+    "SMART_EDI_GET_ALL_COMPANIES": {
+        "UAT": "SMART_EDI_GET_ALL_COMPANIES_UAT",
+        "PROD": "SMART_EDI_GET_ALL_COMPANIES_PROD"
+    },
+    "SMART_EDI_POST_ALL_COMPANIES": {
+        "UAT": "SMART_EDI_POST_ALL_COMPANIES_UAT",
+        "PROD": "SMART_EDI_POST_ALL_COMPANIES_PROD"
     },
     "KAFKA_BOOSTRAP_SERVER_UAT": {
         "UAT": "10.10.4.103:30092",
@@ -956,6 +1492,10 @@
             }
         }
     },
+    "OIPA_BASE_URL": {
+        "UAT": "https://brtgw.britam.com/nillas/internal/uat/",
+        "PROD": "https://brtgw.britam.com/nillas/internal/uat/"
+    },
     "IGAS_SAVE_NOTIFICATION_TO_DB": {
         "UAT": "IGAS_SAVE_NOTIFICATION_TO_DB_SUCCESSFULLY_UAT",
         "PROD": "IGAS_SAVE_NOTIFICATION_TO_DB_SUCCESSFULLY_PROD"
@@ -1008,6 +1548,26 @@
         "UAT": "/mpesa/c2b/{version}/simulate",
         "PROD": "/mpesa/c2b/{version}/simulate"
     },
+    "BRITAM_UNVALIDATED_BANK_REQUESTS": {
+        "UAT": "BRITAM_UNVALIDATED_BANK_REQUESTS_UAT",
+        "PROD": "BRITAM_UNVALIDATED_BANK_REQUESTS_PROD"
+    },
+    "BRITAM_SEND_FOR_VALIDATION_CONFIRMATION": {
+        "UAT": "BRITAM_SEND_FOR_VALIDATION_CONFIRMATION_UAT",
+        "PROD": "BRITAM_SEND_FOR_VALIDATION_CONFIRMATION_PROD"
+    },
+    "BRITAM_INSIS_SUCCESSFULL_PAYMENT": {
+        "UAT": "BRITAM_INSIS_SUCCESSFULL_PAYMENT_UAT",
+        "PROD": "BRITAM_INSIS_SUCCESSFULL_PAYMENT_PROD"
+    },
+    "BRITAM_AGENT_APP_SUCCESSFULL_PAYMENT": {
+        "UAT": "BRITAM_AGENT_APP_SUCCESSFULL_PAYMENT_UAT",
+        "PROD": "BRITAM_AGENT_APP_SUCCESSFULL_PAYMENT_PROD"
+    },
+    "BRITAM_AGILE_PEN_APP_SUCCESSFULL_PAYMENT": {
+        "UAT": "BRITAM_AGILE_PEN_APP_SUCCESSFULL_PAYMENT_UAT",
+        "PROD": "BRITAM_AGILE_PEN_APP_SUCCESSFULL_PAYMENT_PROD"
+    },
     "MPESA_NOTIFICATION": {
         "UAT": "PAYMENT_SEND_USER_CALLBACK_UAT",
         "PROD": "PAYMENT_SEND_USER_CALLBACK_PROD"
@@ -1022,7 +1582,7 @@
     },
     "KAFKA_BOOSTRAP_SERVER": {
         "UAT": "10.10.4.103:30092",
-        "PROD": "kafka:9093"
+        "PROD": "172.18.0.67:30029"
     },
     "IGAS": {
         "UAT": "IGAS",
@@ -1049,6 +1609,15 @@
             "DATABASE": {
                 "default": {
                     "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[AGENT_APP_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "CONN_MAX_AGE": 600
+                },
+                "agent_app": {
+                    "ENGINE": "django.db.backends.oracle",
                     "NAME": "AgentsApp",
                     "USER": "agent_bb",
                     "PASSWORD": "britam123",
@@ -1074,6 +1643,15 @@
         "PROD": {
             "DATABASE": {
                 "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[AGENT_APP_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "CONN_MAX_AGE": 600
+                },
+                "agent_app": {
                     "ENGINE": "django.db.backends.oracle",
                     "NAME": "AgentsApp",
                     "USER": "agent_bb",
@@ -1140,13 +1718,13 @@
                 ]
             },
             "APIS": {
-                "BASE_URL": "https://api.AmaliDDs.com:1824",
-                "LOGIN": "/AmaliWebAPI/token",
+                "BASE_URL": "https://196.28.11.70:1840",
+                "LOGIN": "/webapi/token",
                 "BANK_ACCOUNT_VALIDATION": "/AmaliWebAPI/AccountValidation",
-                "NEW_MANDATES": "/AmaliWebAPI/newmandate",
-                "AMMEND_MANDATES": "/AmaliWebAPI/amenddirectdebit",
-                "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
-                "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
+                "NEW_MANDATES": "/WebAPI/newmandate",
+                "AMMEND_MANDATES": "/WebAPI/amenddirectdebit",
+                "CANCEL_MANDATES": "/WebAPI/canceldirectdebit",
+                "INITIATE_DD_COLLECTION": "/WebAPI/directdebitcollection",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
                 "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid",
                 "ORIGINATOR_DD_LOG": "/DD_log",
@@ -1161,9 +1739,9 @@
                 "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_UAT",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_UAT",
                 "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_UAT",
-                "ORIGINATOR_DD_LOG": "ORIGINATOR_DD_LOG_UAT",
-                "ORIGINATOR_DD_OUTWARD_POSTING": "ORIGINATOR_DD_OUTWARD_POSTING_UAT",
-                "ORIGINATOR_DDS_UNPAID_POSTING": "ORIGINATOR_DDS_UNPAID_POSTING_UAT"
+                "ORIGINATOR_DD_LOG": "NCBA_DDA_ORIGINATOR_DD_LOG_UAT",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "NCBA_DDA_ORIGINATOR_DD_OUTWARD_POSTING_UAT",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "NCBA_DDA_ORIGINATOR_DDS_UNPAID_POSTING_UAT"
             }
         },
         "PROD": {
@@ -1191,13 +1769,13 @@
                 ]
             },
             "APIS": {
-                "BASE_URL": "https://api.AmaliDDs.com:1824",
-                "LOGIN": "/AmaliWebAPI/token",
+                "BASE_URL": "https://196.28.11.70:1840",
+                "LOGIN": "/webapi/token",
                 "BANK_ACCOUNT_VALIDATION": "/AmaliWebAPI/AccountValidation",
-                "NEW_MANDATES": "/AmaliWebAPI/newmandate",
-                "AMMEND_MANDATES": "/AmaliWebAPI/amenddirectdebit",
-                "CANCEL_MANDATES": "/AmaliWebAPI/canceldirectdebit",
-                "INITIATE_DD_COLLECTION": "/AmaliWebAPI/directdebitcollection",
+                "NEW_MANDATES": "/WebAPI/newmandate",
+                "AMMEND_MANDATES": "/WebAPI/amenddirectdebit",
+                "CANCEL_MANDATES": "/WebAPI/canceldirectdebit",
+                "INITIATE_DD_COLLECTION": "/WebAPI/directdebitcollection",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "/OutwardDDs",
                 "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "/OutwardDDsUnpaid",
                 "ORIGINATOR_DD_LOG": "/DD_log",
@@ -1212,10 +1790,659 @@
                 "INITIATE_DD_COLLECTION": "NCBA_DDA_INITIATE_DD_COLLECTION_PROD",
                 "OUTWARD_DIRECT_DEBIT_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_POSTING_PROD",
                 "OUTWARD_DIRECT_DEBIT_UNPAID_POSTING": "NCBA_DDA_OUTWARD_DIRECT_DEBIT_UNPAID_POSTING_PROD",
-                "ORIGINATOR_DD_LOG": "ORIGINATOR_DD_LOG_PROD",
-                "ORIGINATOR_DD_OUTWARD_POSTING": "ORIGINATOR_DD_OUTWARD_POSTING_PROD",
-                "ORIGINATOR_DDS_UNPAID_POSTING": "ORIGINATOR_DDS_UNPAID_POSTING_PROD"
+                "ORIGINATOR_DD_LOG": "NCBA_DDA_ORIGINATOR_DD_LOG_PROD",
+                "ORIGINATOR_DD_OUTWARD_POSTING": "NCBA_DDA_ORIGINATOR_DD_OUTWARD_POSTING_PROD",
+                "ORIGINATOR_DDS_UNPAID_POSTING": "NCBA_DDA_ORIGINATOR_DDS_UNPAID_POSTING_PROD"
             }
         }
+    },
+    "SMART_EDI_UPDATE_CLAIM": {
+        "UAT": "SMART_EDI_UPDATE_CLAIM_UAT",
+        "PROD": "SMART_EDI_UPDATE_CLAIM_PROD"
+    },
+    "SMART_EDI_INSERT_DATA": {
+        "UAT": "SMART_EDI_SEND_TO_DB_DATA_UAT",
+        "PROD": "SMART_EDI_SEND_TO_DB_DATA_PROD"
+    },
+    "SMART_EDI_INSERT_TO_INSIS": {
+        "UAT": "SMART_EDI_INSERT_TO_INSIS_UAT",
+        "PROD": "SMART_EDI_INSERT_TO_INSIS_PROD"
+    },
+    "SMART_EDI_SUCCESSFULLY_INSERTED": {
+        "UAT": "SMART_EDI_SUCCESSFULLY_INSERTED_UAT",
+        "PROD": "SMART_EDI_SUCCESSFULLY_INSERTED_PROD"
+    },
+    "SMART_EDI_GROUP": {
+        "UAT": "SMART_EDI_GROUP_UAT",
+        "PROD": "SMART_EDI_GROUP_PROD"
+    },
+    "NILLAS_POST_MPESA_PAYMENT_ENDPOINT": {
+        "UAT": "https://brtgw.britam.com/nillas/internal/uat/api/v1/payment-details-internal/",
+        "PROD": "https://brtgw.britam.com/nillas/internal/uat/api/v1/payment-details-internal/"
+    },
+    "SMART_EDI_ERRORS": {
+        "UAT": "SMART_EDI_ERRORS_UAT",
+        "PROD": "SMART_EDI_ERRORS_PROD"
+    },
+    "SMART_EDI_INVOICES_CHECKS": {
+        "UAT": "SMART_EDI_INVOICES_CHECKS_UAT",
+        "PROD": "SMART_EDI_INVOICES_CHECKS_PROD"
+    },
+    "COOP_BANK_SUCCESSFULLY_SAVED_NOTIFICATION": {
+        "UAT": "COOP_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_UAT",
+        "PROD": "COOP_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_PROD"
+    },
+    "PAYMENT_C2B_SAVED_TO_DB": {
+        "UAT": "PAYMENT_C2B_SAVED_TO_DB_UAT",
+        "PROD": "PAYMENT_C2B_SAVED_TO_DB_PROD"
+    },
+    "REDIS_CONFIG_URL": {
+        "UAT": "redis://10.10.4.103:30051/0",
+        "PROD": "redis://172.18.0.67:31027/0"
+    },
+    "VALIDATION_CALLBACK_TOPIC_ERROR_UPDATED": {
+        "UAT": "VALIDATION_CALLBACK_TOPIC_ERROR_UPDATED_UAT",
+        "PROD": "VALIDATION_CALLBACK_TOPIC_ERROR_UPDATED_PROD"
+    },
+    "IGAS_NOTIFICATION_SUCCESSFULL_PAYMENT": {
+        "UAT": "IGAS_NOTIFICATION_SUCCESSFULL_PAYMENT_UAT",
+        "PROD": "IGAS_NOTIFICATION_SUCCESSFULL_PAYMENT_PROD"
+    },
+    "BRITAM_NILAS_CONFIG": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[NILAS_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "API": {
+                "BASE_URL": "http://10.10.3.197",
+                "USERNAME": "sladmin",
+                "PASSWORD": "sladmin123"
+            },
+            "ROLES": {
+                "API_NILAS_CREATE_MEMBER": "API_NILAS_CREATE_MEMBER_UAT",
+                "API_NILAS_CREATE_NOMINEE": "API_NILAS_CREATE_NOMINEE_UAT",
+                "API_NILAS_CREATE_FINANCIAL_INFO": "API_NILAS_CREATE_FINANCIAL_INFO_UAT",
+                "API_NILAS_CREATE_MEMBER_LIFESTYLE": "API_NILAS_CREATE_MEMBER_LIFESTYLE_UAT",
+                "API_NILAS_PRODUCT_SEARCH": "API_NILAS_PRODUCT_SEARCH_UAT",
+                "API_NILAS_CREATE_QUOTE": "API_NILAS_CREATE_QUOTE_UAT",
+                "API_NILAS_SAVE_APPLICATION": "API_NILAS_SAVE_APPLICATION_UAT",
+                "API_NILAS_PAYOUT_DETAILS": "API_NILAS_PAYOUT_DETAILS_UAT",
+                "API_NILAS_CREATE_PAYMENT_DETAILS": "API_NILAS_CREATE_PAYMENT_DETAILS_UAT",
+                "API_NILAS_GET_ALL_PLAN": "API_NILAS_GET_ALL_PLAN_UAT",
+                "API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO": "API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO_UAT",
+                "API_NILAS_GET_FREQUENCY": "API_NILAS_GET_FREQUENCY_UAT",
+                "API_NILAS_GET_DURATIONS": "API_NILAS_GET_DURATIONS_UAT",
+                "API_NILAS_CUSTOMER_SEARCH": "API_NILAS_CUSTOMER_SEARCH_UAT",
+                "API_NILAS_GET_PREMIUM_LIMITS": "API_NILAS_GET_PREMIUM_LIMITS_UAT",
+                "API_NILAS_CREATE_PAYOUT_MODE": "API_NILAS_CREATE_PAYOUT_MODE_UAT",
+                "API_NILAS_IDENTIFICATION_DETAILS": "API_NILAS_IDENTIFICATION_DETAILS_UAT",
+                "API_NILAS_DOCUMENTS_UPLOAD": "API_NILAS_DOCUMENTS_UPLOAD_UAT",
+                "API_NILAS_PAYER_DETAILS": "API_NILAS_PAYER_DETAILS_UAT",
+                "API_NILAS_INITIAL_PAYMENT_DETAILS": "API_NILAS_INITIAL_PAYMENT_DETAILS_UAT",
+                "API_NILAS_PAYMENT_DETAILS": "API_NILAS_PAYMENT_DETAILS_UAT",
+                "API_NILAS_GENERATE_APPLICATION_ID": "API_NILAS_GENERATE_APPLICATION_ID_UAT",
+                "API_NILAS_INSURED_DETAILS": "API_NILAS_INSURED_DETAILS_UAT",
+                "API_NILAS_UPDATE_FINANCIAL_INFO": "API_NILAS_UPDATE_FINANCIAL_INFO_UAT",
+                "API_NILAS_SUBMIT_MEDICALS": "API_NILAS_SUBMIT_MEDICALS_UAT",
+                "API_NILAS_SUBMIT_ADDITIONAL_MEDICALS": "API_NILAS_SUBMIT_ADDITIONAL_MEDICALS_UAT",
+                "API_NILAS_BENEFICIARY_DETAILS": "API_NILAS_BENEFICIARY_DETAILS_UAT",
+                "API_NILAS_NOMINEE_DETAILS": "API_NILAS_NOMINEE_DETAILS_UAT",
+                "API_NILAS_FINAL_SUBMISSION_CASE_APPLICATION": "API_NILAS_FINAL_SUBMISSION_CASE_APPLICATION_UAT",
+                "API_NILAS_SUBSEQUENT_PAYMENT": "API_NILAS_SUBSEQUENT_PAYMENT_UAT",
+                "API_NILAS_AS_CODE_RELATIONSHIPS": "API_NILAS_AS_CODE_RELATIONSHIPS_UAT",
+                "API_NILAS_AS_CODE_BRITAM_OCCUPATION": "API_NILAS_AS_CODE_BRITAM_OCCUPATION_UAT",
+                "API_NILAS_AS_CODE_CLIENT_PREFIX": "API_NILAS_AS_CODE_CLIENT_PREFIX_UAT",
+                "API_NILAS_AS_CODE_MARITAL_STATUS": "API_NILAS_AS_CODE_MARITAL_STATUS_UAT",
+                "API_NILAS_GET_CLIENTS": "API_NILAS_GET_CLIENTS_UAT",
+                "API_NILAS_GET_CASE": "API_NILAS_GET_CASE_UAT",
+                "API_NILAS_FILTER_BY_AGENT_ID": "API_NILAS_FILTER_BY_AGENT_ID_UAT",
+                "API_NILAS_PROCESS_PARTIAL": "API_NILAS_PROCESS_PARTIAL_UAT",
+                "API_NILAS_GET_PARTIAL": "API_NILAS_GET_PARTIAL_UAT",
+                "API_NILAS_UPDATE_PAYOUT": "API_NILAS_UPDATE_PAYOUT_UAT",
+                "API_NILAS_GET_MONTHLY_STATEMENTS": "API_NILAS_GET_MONTHLY_STATEMENTS_UAT",
+                "API_NILAS_GET_TAX_CERTIFICATE": "API_NILAS_GET_TAX_CERTIFICATE_UAT",
+                "API_NILAS_PREMIUM_RENEWAL": "API_NILAS_PREMIUM_RENEWAL_UAT",
+                "API_NILAS_GET_BANK_ACCOUNTS": "API_NILAS_GET_BANK_ACCOUNTS_UAT",
+                "API_NILAS_GET_BENEFICIARIES": "API_NILAS_GET_BENEFICIARIES_UAT",
+                "API_NILAS_GET_BANK_ACCOUNT_POLICIES": "API_NILAS_GET_BANK_ACCOUNT_POLICIES_UAT",
+                "API_NILAS_GET_POLICY_DETAILS": "API_NILAS_GET_POLICY_DETAILS_UAT",
+                "API_NILAS_GET_BENEFITS": "API_NILAS_GET_BENEFITS_UAT",
+                "API_NILAS_GET_CLIENT_PREFIX": "API_NILAS_GET_CLIENT_PREFIX_UAT",
+                "API_NILAS_GET_COUNTRY_LIST": "API_NILAS_GET_COUNTRY_LIST_UAT",
+                "API_NILAS_GET_OCCUPATION_LIST": "API_NILAS_GET_OCCUPATION_LIST_UAT",
+                "API_NILAS_GET_MARITAL_STATUS": "API_NILAS_GET_MARITAL_STATUS_UAT",
+                "API_NILAS_GET_RELATIONSHIP_LOOKUP_LIST": "API_NILAS_GET_RELATIONSHIP_LOOKUP_LIST_UAT",
+                "API_NILAS_SOURCE_OF_FUND_DETAIL": "API_NILAS_SOURCE_OF_FUND_DETAIL_UAT",
+                "API_NILAS_GET_BRITAM_OCCUPATION_LIST": "API_NILAS_GET_BRITAM_OCCUPATION_LIST_UAT",
+                "API_NILAS_GET_RELIST": "API_NILAS_GET_RELIST_UAT",
+                "API_NILLAS_GET_AUTO_LOADING": "API_NILLAS_GET_AUTO_LOADING_UAT",
+                "API_NILAS_UPDATE_CASE_STATUS": "API_NILAS_UPDATE_CASE_STATUS_UAT",
+                "API_NILAS_UPDATE_MEMBER": "API_NILAS_UPDATE_MEMBER_UAT",
+                "API_NILLAS_GET_POLICY_BY_POLICY_NUMBER": "API_NILLAS_GET_POLICY_BY_POLICY_NUMBER_UAT"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[NILAS_PAYMENTS]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "API": {
+                "BASE_URL": "http://BRATUMVERSEAPP01.BRITAMGROUP.COM",
+                "USERNAME": "sladmin",
+                "PASSWORD": "sladmin123"
+            },
+            "ROLES": {
+                "API_NILAS_CREATE_MEMBER": "API_NILAS_CREATE_MEMBER",
+                "API_NILAS_CREATE_NOMINEE": "API_NILAS_CREATE_NOMINEE",
+                "API_NILAS_CREATE_FINANCIAL_INFO": "API_NILAS_CREATE_FINANCIAL_INFO",
+                "API_NILAS_CREATE_MEMBER_LIFESTYLE": "API_NILAS_CREATE_MEMBER_LIFESTYLE",
+                "API_NILAS_PRODUCT_SEARCH": "API_NILAS_PRODUCT_SEARCH",
+                "API_NILAS_CREATE_QUOTE": "API_NILAS_CREATE_QUOTE",
+                "API_NILAS_SAVE_APPLICATION": "API_NILAS_SAVE_APPLICATION",
+                "API_NILAS_PAYOUT_DETAILS": "API_NILAS_PAYOUT_DETAILS",
+                "API_NILAS_CREATE_PAYMENT_DETAILS": "API_NILAS_CREATE_PAYMENT_DETAILS",
+                "API_NILAS_GET_ALL_PLAN": "API_NILAS_GET_ALL_PLAN",
+                "API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO": "API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO",
+                "API_NILAS_GET_FREQUENCY": "API_NILAS_GET_FREQUENCY",
+                "API_NILAS_GET_DURATIONS": "API_NILAS_GET_DURATIONS",
+                "API_NILAS_CUSTOMER_SEARCH": "API_NILAS_CUSTOMER_SEARCH",
+                "API_NILAS_GET_PREMIUM_LIMITS": "API_NILAS_GET_PREMIUM_LIMITS",
+                "API_NILAS_CREATE_PAYOUT_MODE": "API_NILAS_CREATE_PAYOUT_MODE",
+                "API_NILAS_IDENTIFICATION_DETAILS": "API_NILAS_IDENTIFICATION_DETAILS",
+                "API_NILAS_DOCUMENTS_UPLOAD": "API_NILAS_DOCUMENTS_UPLOAD",
+                "API_NILAS_PAYER_DETAILS": "API_NILAS_PAYER_DETAILS",
+                "API_NILAS_INITIAL_PAYMENT_DETAILS": "API_NILAS_INITIAL_PAYMENT_DETAILS",
+                "API_NILAS_PAYMENT_DETAILS": "API_NILAS_PAYMENT_DETAILS",
+                "API_NILAS_GENERATE_APPLICATION_ID": "API_NILAS_GENERATE_APPLICATION_ID",
+                "API_NILAS_INSURED_DETAILS": "API_NILAS_INSURED_DETAILS",
+                "API_NILAS_UPDATE_FINANCIAL_INFO": "API_NILAS_UPDATE_FINANCIAL_INFO",
+                "API_NILAS_SUBMIT_MEDICALS": "API_NILAS_SUBMIT_MEDICALS",
+                "API_NILAS_SUBMIT_ADDITIONAL_MEDICALS": "API_NILAS_SUBMIT_ADDITIONAL_MEDICALS",
+                "API_NILAS_BENEFICIARY_DETAILS": "API_NILAS_BENEFICIARY_DETAILS",
+                "API_NILAS_NOMINEE_DETAILS": "API_NILAS_NOMINEE_DETAILS",
+                "API_NILAS_FINAL_SUBMISSION_CASE_APPLICATION": "API_NILAS_FINAL_SUBMISSION_CASE_APPLICATION",
+                "API_NILAS_SUBSEQUENT_PAYMENT": "API_NILAS_SUBSEQUENT_PAYMENT",
+                "API_NILAS_AS_CODE_RELATIONSHIPS": "API_NILAS_AS_CODE_RELATIONSHIPS",
+                "API_NILAS_AS_CODE_BRITAM_OCCUPATION": "API_NILAS_AS_CODE_BRITAM_OCCUPATION",
+                "API_NILAS_AS_CODE_CLIENT_PREFIX": "API_NILAS_AS_CODE_CLIENT_PREFIX",
+                "API_NILAS_AS_CODE_MARITAL_STATUS": "API_NILAS_AS_CODE_MARITAL_STATUS",
+                "API_NILAS_GET_CLIENTS": "API_NILAS_GET_CLIENTS",
+                "API_NILAS_GET_CASE": "API_NILAS_GET_CASE",
+                "API_NILAS_FILTER_BY_AGENT_ID": "API_NILAS_FILTER_BY_AGENT_ID",
+                "API_NILAS_PROCESS_PARTIAL": "API_NILAS_PROCESS_PARTIAL",
+                "API_NILAS_GET_PARTIAL": "API_NILAS_GET_PARTIAL",
+                "API_NILAS_UPDATE_PAYOUT": "API_NILAS_UPDATE_PAYOUT",
+                "API_NILAS_GET_MONTHLY_STATEMENTS": "API_NILAS_GET_MONTHLY_STATEMENTS",
+                "API_NILAS_GET_TAX_CERTIFICATE": "API_NILAS_GET_TAX_CERTIFICATE",
+                "API_NILAS_PREMIUM_RENEWAL": "API_NILAS_PREMIUM_RENEWAL",
+                "API_NILAS_GET_BANK_ACCOUNTS": "API_NILAS_GET_BANK_ACCOUNTS",
+                "API_NILAS_GET_BENEFICIARIES": "API_NILAS_GET_BENEFICIARIES",
+                "API_NILAS_GET_BANK_ACCOUNT_POLICIES": "API_NILAS_GET_BANK_ACCOUNT_POLICIES",
+                "API_NILAS_GET_POLICY_DETAILS": "API_NILAS_GET_POLICY_DETAILS",
+                "API_NILAS_GET_BENEFITS": "API_NILAS_GET_BENEFITS",
+                "API_NILAS_GET_CLIENT_PREFIX": "API_NILAS_GET_CLIENT_PREFIX",
+                "API_NILAS_GET_COUNTRY_LIST": "API_NILAS_GET_COUNTRY_LIST",
+                "API_NILAS_GET_OCCUPATION_LIST": "API_NILAS_GET_OCCUPATION_LIST",
+                "API_NILAS_GET_MARITAL_STATUS": "API_NILAS_GET_MARITAL_STATUS",
+                "API_NILAS_GET_RELATIONSHIP_LOOKUP_LIST": "API_NILAS_GET_RELATIONSHIP_LOOKUP_LIST",
+                "API_NILAS_SOURCE_OF_FUND_DETAIL": "API_NILAS_SOURCE_OF_FUND_DETAIL",
+                "API_NILAS_GET_BRITAM_OCCUPATION_LIST": "API_NILAS_GET_BRITAM_OCCUPATION_LIST",
+                "API_NILAS_GET_RELIST": "API_NILAS_GET_RELIST",
+                "API_NILLAS_GET_AUTO_LOADING": "API_NILLAS_GET_AUTO_LOADING",
+                "API_NILAS_UPDATE_CASE_STATUS": "API_NILAS_UPDATE_CASE_STATUS",
+                "API_NILAS_UPDATE_MEMBER": "API_NILAS_UPDATE_MEMBER",
+                "API_NILLAS_GET_POLICY_BY_POLICY_NUMBER": "API_NILLAS_GET_POLICY_BY_POLICY_NUMBER_PROD"
+            }
+        }
+    },
+    "SMART_EDI_PUT_ALL_COMPANIES": {
+        "UAT": "SMART_EDI_PUT_ALL_COMPANIES_UAT",
+        "PROD": "SMART_EDI_PUT_ALL_COMPANIES_PROD"
+    },
+    "BRITAM_SMART_EDI": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[smart_edi]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "erp_table": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "PREPROD",
+                    "USER": "apps",
+                    "PASSWORD": "ADVANTAGE#_N01",
+                    "HOST": "10.10.4.12",
+                    "PORT": "1531"
+                }
+            },
+            "API": {
+                "SMART_BASE_URL": "https://data.smartapplicationsgroup.com",
+                "CLIENT_ID": "ed2331f4-520a-4a00-870c-e4c7e7501ab8",
+                "GRANT_TYPE": "client_credentials",
+                "CLIENT_SECRET": "4lYa_AoDBicP57XeEpHmDjZBUVA",
+                "CUSTOMER_ID": "BRIT7E8BDCA244DA8442ED9C2321AMKE",
+                "COUNTRY_CODE": "KE",
+                "IS_UPDATED": "false",
+                "LIMIT": 100,
+                "CLAIMS_URL": "https://data.smartapplicationsgroup.com/api/v2/integqa/claims/edi?customerid=BRIT7E8BDCA244DA8442ED9C2321AMKE&countrycode=KE&isUpdate=false&limit=100",
+                "UPDATE_URL": "https://data.smartapplicationsgroup.com/api/v2/integqa/claims/edi/status?customerid=BRIT7E8BDCA244DA8442ED9C2321AMKE&countrycode=KE&statusMsg=1234&status=1"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "DDO": {
+                "SERVER": "10.10.3.171",
+                "USER": "userddo",
+                "PASSWORD": "Britam123",
+                "DATABASE": "DDO"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[smart_edi]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "erp_table": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "PREPROD",
+                    "USER": "apps",
+                    "PASSWORD": "ADVANTAGE#_N01",
+                    "HOST": "10.10.4.12",
+                    "PORT": "1531"
+                }
+            },
+            "API": {
+                "SMART_BASE_URL": "https://data.smartapplicationsgroup.com",
+                "CLIENT_ID": "eoxmyw-i3fl45-akusr6-cq7tzb-v91h0j",
+                "GRANT_TYPE": "client_credentials",
+                "CLIENT_SECRET": "z5s0nawl4d9iukfx36pyvoe8hm2j",
+                "CUSTOMER_ID": "BAI9VRYPL4C1NBUTZQ8PRODKE",
+                "COUNTRY_CODE": "KE",
+                "IS_UPDATED": "false",
+                "LIMIT": 100,
+                "CLAIMS_URL": "https://data.smartapplicationsgroup.com/api/v2/integration/claims/edi?customerid=BAI9VRYPL4C1NBUTZQ8PRODKE&countrycode=KE&isUpdate=false&limit=100",
+                "UPDATE_URL": "https://data.smartapplicationsgroup.com/api/v2/integration/claims/edi/status?customerid=BAI9VRYPL4C1NBUTZQ8PRODKE&countrycode=KE&statusMsg=1234&status=1"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "DDO": {
+                "SERVER": "172.26.0.21",
+                "USER": "userddo",
+                "PASSWORD": "Britam123",
+                "DATABASE": "DDO"
+            }
+        }
+    },
+    "SMART_EDI_DELETE_ALL_COMPANIES": {
+        "UAT": "SMART_EDI_DELETE_ALL_COMPANIES_UAT",
+        "PROD": "SMART_EDI_DELETE_ALL_COMPANIES_PROD"
+    },
+    "BRITAM_KCB_CONFIGARATION": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[kcb_uat]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "igas": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "IGASUAT",
+                    "USER": "baowner",
+                    "PASSWORD": "baowner",
+                    "HOST": "10.10.4.236",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "KCB_INITIATE_PAYMENT_LIFE": "KCB_INITIATE_PAYMENT_LIFE",
+                "KCB_GET_VALIDATION": "KCB_GET_VALIDATION"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[kcb]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                },
+                "igas": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "IGASUAT",
+                    "USER": "baowner",
+                    "PASSWORD": "baowner",
+                    "HOST": "10.10.4.236",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "KCB_INITIATE_PAYMENT_LIFE": "KCB_INITIATE_PAYMENT_LIFE",
+                "KCB_GET_VALIDATION": "KCB_GET_VALIDATION"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            }
+        }
+    },
+    "KCB_LOGGING_SEND_ERROR_LOG_ISSUES": {
+        "UAT": "KCB_LOGGING_SEND_ERROR_LOG_ISSUES_UAT",
+        "PROD": "KCB_LOGGING_SEND_ERROR_LOG_ISSUES_PROD"
+    },
+    "REDIS_PAYMENT_ERROR_KAFKA": {
+        "UAT": "REDIS_PAYMENT_ERROR_KAFKA_UAT",
+        "PROD": "REDIS_PAYMENT_ERROR_KAFKA_PROD"
+    },
+    "LOGGING_AIMS_RWANDA_SUCCESS_ISSUES": {
+        "UAT": "LOGGING_AIMS_RWANDA_SUCCESS_ISSUES_UAT",
+        "PROD": "LOGGING_AIMS_RWANDA_SUCCESS_ISSUES_PROD"
+    },
+    "SMART_UPDATE_SMART_CLAIMS_THAT_HAVE_BEEN_RECEIVED": {
+        "UAT": "SMART_UPDATE_SMART_CLAIMS_THAT_HAVE_BEEN_RECEIVED_UAT",
+        "PROD": "SMART_UPDATE_SMART_CLAIMS_THAT_HAVE_BEEN_RECEIVED_PROD"
+    },
+    "PAYMENT_C2B_CALLBACK_DATA": {
+        "UAT": "PAYMENT_C2B_CALLBACK_DATA_UAT",
+        "PROD": "PAYMENT_C2B_CALLBACK_DATA_PROD"
+    },
+    "PAYMENT_C2B_CALLBACK_ERRORS": {
+        "UAT": "PAYMENT_C2B_CALLBACK_ERRORS_UAT",
+        "PROD": "PAYMENT_C2B_CALLBACK_ERRORS_PROD"
+    },
+    "BRITAM_NCBA_CONFIGARATION": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[ncba_uat]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            },
+            "ROLES": {
+                "NCBA_INITIATE_PAYMENT": "NCBA_SAVE_PAYMENT"
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[ncba]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521"
+                }
+            },
+            "ROLES": {
+                "NCBA_INITIATE_PAYMENT": "NCBA_SAVE_PAYMENT_PROD"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            }
+        }
+    },
+    "NCBA_LOGGING_SEND_ERROR_LOG_ISSUES": {
+        "UAT": "NCBA_LOGGING_SEND_ERROR_LOG_ISSUES_UAT",
+        "PROD": "NCBA_LOGGING_SEND_ERROR_LOG_ISSUES_PROD"
+    },
+    "BRITAM_NILAS_ERROR": {
+        "UAT": "BRITAM_NILAS_ERROR_UAT",
+        "PROD": "BRITAM_NILAS_ERROR_PROD"
+    },
+    "AGENT_APP_SEND_NOTIFICATION_TO_AGENT_APP_WEB_SERVICE": {
+        "UAT": "AGENT_APP_SEND_NOTIFICATION_TO_AGENT_APP_WEB_SERVICE_UAT",
+        "PROD": "AGENT_APP_SEND_NOTIFICATION_TO_AGENT_APP_WEB_SERVICE_PROD"
+    },
+    "SMART_EDI_CALLBACK_SUCCESS_MESSAGE": {
+        "UAT": "SMART_EDI_CALLBACK_SUCCESS_MESSAGE_UAT",
+        "PROD": "SMART_EDI_CALLBACK_SUCCESS_MESSAGE_PROD"
+    },
+    "SMART_EDI_SEND_MESSAGE_TO_GET_TOKEN": {
+        "UAT": "SMART_EDI_SEND_MESSAGE_TO_GET_TOKEN_UAT",
+        "PROD": "SMART_EDI_SEND_MESSAGE_TO_GET_TOKEN_PROD"
+    },
+    "SMART_EDI_TOKEN_GENERATION": {
+        "UAT": "SMART_EDI_TOKEN_GENERATION_UAT",
+        "PROD": "SMART_EDI_TOKEN_GENERATION_PROD"
+    },
+    "PAYMENT_DIGITAL_CALLBACK": {
+        "UAT": "PAYMENT_DIGITAL_CALLBACK_UAT",
+        "PROD": "PAYMENT_DIGITAL_CALLBACK_PROD"
+    },
+    "NCBA_BANK_SUCCESSFULLY_SAVED_NOTIFICATION": {
+        "UAT": "NCBA_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_UAT",
+        "PROD": "NCBA_BANK_SUCCESSFULLY_SAVED_NOTIFICATION_PROD"
+    },
+    "NCBA_BANK_GROUP": {
+        "UAT": "NCBA_BANK_GROUP_UAT",
+        "PROD": "NCBA_BANK_GROUP_PROD"
+    },
+    "KCB_NOTIFICATION_GROUP": {
+        "UAT": "KCB_NOTIFICATION_GROUP_UAT",
+        "PROD": "KCB_NOTIFICATION_GROUP_PROD"
+    },
+    "BRITAM_NILAS_GROUP": {
+        "UAT": "BRITAM_NILAS_GROUP_UAT",
+        "PROD": "BRITAM_NILAS_GROUP_PROD"
+    },
+    "SMART_EDI_UPDATE_CLAIMS": {
+        "UAT": "SMART_EDI_UPDATE_CLAIMS_UAT",
+        "PROD": "SMART_EDI_UPDATE_CLAIMS_PROD"
+    },
+    "BRITAM_COOP_CONFIGARATION": {
+        "UAT": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[coop_uat]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "CONN_MAX_AGE": 600
+                }
+            },
+            "ROLES": {
+                "COOP_BANK_VALIDATE_PAYMENT": "COOP_BANK_VALIDATE_PAYMENT_UAT",
+                "COOP_BANK_INITIATE_PAYMENT": "COOP_BANK_INITIATE_PAYMENT_UAT",
+                "COOP_BANK_VALIDATE_CUSTOMER": "COOP_BANK_VALIDATE_CUSTOMER_UAT"
+            },
+            "SECURITY": {
+                "DEBUG": true,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "127.0.0.1",
+                    "localhost",
+                    "uat.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://uat.example.com"
+                ]
+            }
+        },
+        "PROD": {
+            "DATABASE": {
+                "default": {
+                    "ENGINE": "django.db.backends.oracle",
+                    "NAME": "dwh",
+                    "USER": "tachongo[coop]",
+                    "PASSWORD": "H#rd2_gu355",
+                    "HOST": "172.26.0.47",
+                    "PORT": "1521",
+                    "CONN_MAX_AGE": 600
+                }
+            },
+            "ROLES": {
+                "COOP_BANK_VALIDATE_PAYMENT": "COOP_BANK_VALIDATE_PAYMENT_PROD",
+                "COOP_BANK_INITIATE_PAYMENT": "COOP_BANK_INITIATE_PAYMENT_PROD",
+                "COOP_BANK_VALIDATE_CUSTOMER": "COOP_BANK_VALIDATE_CUSTOMER_PROD"
+            },
+            "SECURITY": {
+                "DEBUG": false,
+                "SECRET_KEY": "django-insecure-)8#_@$)su8sfutjo$y_igegcmz#1@^xnowi!3lk7isv3uklo8@",
+                "ALLOWED_HOSTS": [
+                    "api.example.com",
+                    "prod.example.com",
+                    "*"
+                ],
+                "CORS_ORIGIN_WHITELIST": [
+                    "https://prod.example.com"
+                ]
+            }
+        }
+    },
+    "SMART_EDI_GET_INSURANCE_TYPE": {
+        "UAT": "SMART_EDI_GET_INSURANCE_TYPE_UAT",
+        "PROD": "SMART_EDI_GET_INSURANCE_TYPE_PROD"
+    },
+    "AIMS_RWANDA": {
+        "UAT": "AIMS_RWANDA_UAT",
+        "PROD": "AIMS_RWANDA_PROD"
+    },
+    "IGAS_NOTIFICATION_ERROR": {
+        "UAT": "IGAS_NOTIFICATION_ERROR_UAT",
+        "PROD": "IGAS_NOTIFICATION_ERROR_PROD"
+    },
+    "PAYMENT_DIGITAL_ERROS": {
+        "UAT": "PAYMENT_DIGITAL_ERROS_UAT",
+        "PROD": "PAYMENT_DIGITAL_ERROS_PROD"
+    },
+    "COOP_LOGGING_SEND_ERROR_LOG_ISSUES": {
+        "UAT": "COOP_LOGGING_SEND_ERROR_LOG_ISSUES_UAT",
+        "PROD": "COOP_LOGGING_SEND_ERROR_LOG_ISSUES_PROD"
+    },
+    "COOP_GROUP": {
+        "UAT": "COOP_GROUP_UAT",
+        "PROD": "COOP_GROUP_PROD"
+    },
+    "REDIS_PAYMENT_SUCCESS_KAFKA": {
+        "UAT": "REDIS_PAYMENT_SUCCESS_KAFKA_UAT",
+        "PROD": "REDIS_PAYMENT_SUCCESS_KAFKA_PROD"
+    },
+    "SMART_EDI_ADD_INSURANCE_TYPE": {
+        "UAT": "SMART_EDI_ADD_INSURANCE_TYPE_UAT",
+        "PROD": "SMART_EDI_ADD_INSURANCE_TYPE_PROD"
+    },
+    "LOGGING_AIMS_RWANDA_ERROR_ISSUES": {
+        "UAT": "LOGGING_AIMS_RWANDA_ERROR_ISSUES_UAT",
+        "PROD": "LOGGING_AIMS_RWANDA_ERROR_ISSUES_PROD"
+    },
+    "VALIDATION_CALLBACK_TOPIC": {
+        "UAT": "VALIDATION_CALLBACK_TOPIC_UAT",
+        "PROD": "VALIDATION_CALLBACK_TOPIC_PROD"
+    },
+    "VALIDATION_CALLBACK_TOPIC_SUCCESSFULLY_UPDATED": {
+        "UAT": "VALIDATION_CALLBACK_TOPIC_SUCCESSFULLY_UPDATED_UAT",
+        "PROD": "VALIDATION_CALLBACK_TOPIC_SUCCESSFULLY_UPDATED_PROD"
+    },
+    "IGAS_NOTIFICATION_ERROR_PAYMENT": {
+        "UAT": "IGAS_NOTIFICATION_ERROR_PAYMENT_UAT",
+        "PROD": "IGAS_NOTIFICATION_ERROR_PAYMENT_PROD"
+    },
+    "BRITAM_AGENT_APP_ERROR": {
+        "UAT": "BRITAM_AGENT_APP_ERROR_UAT",
+        "PROD": "BRITAM_AGENT_APP_ERROR_PROD"
+    },
+    "NILAS_SEND_NOTIFICATION_TO_NILAS_WEB_SERVICE": {
+        "UAT": "NILAS_SEND_NOTIFICATION_TO_NILAS_WEB_SERVICE_UAT",
+        "PROD": "NILAS_SEND_NOTIFICATION_TO_NILAS_WEB_SERVICE_PROD"
     }
 }

@@ -37,8 +37,7 @@ else:
     ROLES = data['BRITAM_NCBA_DDA']['PROD']['ROLES']
     AUDIENCE =  data['AUDIENCE']['PROD']
     ISSUER_ID =  data['ISSUER_ID']['PROD']
-# SECURITY WARNING: don't run with debug turned on in production!
-# Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
