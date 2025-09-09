@@ -91,7 +91,7 @@ class BaseAPIView(APIView):
         app = MicrosoftValidation(request).verify()
         mm = {}
         
-        if app['status'] ==  False:
+        if app['code'] ==  401:
             dddata = {
                             "role": self.role,
                             "successfull": False,
