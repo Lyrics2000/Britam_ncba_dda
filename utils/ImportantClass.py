@@ -101,7 +101,10 @@ class BaseAPIView(APIView):
             kk = make_api_request_log_request(request,dddata)
             # log_view_request(view_name, request, "Unauthorized access attempt", level="warning")
             mm =  app
-            return app
+            return {
+                "status":False,
+                "message":"Unauthorized access attempt"
+            }
         else:
             roles = app.get("data", {}).get("data",{}).get("roles", [])
             logger.info(f"the error is logss qj {roles}")
